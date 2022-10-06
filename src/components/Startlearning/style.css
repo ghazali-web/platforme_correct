@@ -1,0 +1,37 @@
+@import url("../animation/style.css");
+
+.startlearning {
+  display: felx;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+  height: 406px;
+  animation: movedown 1s ease-in-out 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+h1 {
+  color: #2f374b;
+  font-family: Roboto;
+  font-size: 70px;
+  margin-left: 20px;
+}
+.header {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  height: 50px;
+}
+.StartLearn {
+  width: 100px;
+  height: 40px;
+  background-color: #fe7558;
+}
+.StartLearn span {
+  font-family: Roboto;
+  font-size: 12px;
+  color: #ffffff;
+}

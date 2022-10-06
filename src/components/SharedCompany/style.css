@@ -1,0 +1,27 @@
+.headerShared{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  flex-basis: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+  animation: moveright 1s ease-in-out 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+.partner {
+  color: #2f374b;
+  font-family: Roboto;
+  font-weight: bold;
+  }
+  .partner h1{
+    font-size: 50px;
+  }
+.partnerLogo {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+}

@@ -1,0 +1,22 @@
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 1;
+  /* position: absolute; */
+}
+.search-wrap {
+  display: flex;
+  border: 1px solid #008ea1;
+  border-radius: 30px;
+  height: 38px;
+  align-items: center;
+  overflow-x: hidden;
+  width: fit-content;
+}
+.search-wrap input {
+  border: none;
+  height: 0.8rem;
+  padding: 0.5rem;
+  outline: none;
+}

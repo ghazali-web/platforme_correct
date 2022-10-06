@@ -1,0 +1,10 @@
+@import url("../animation/style.css");
+.web-app-image {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  animation: movedown 1s ease-in-out 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}

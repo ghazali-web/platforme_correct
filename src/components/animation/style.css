@@ -1,0 +1,46 @@
+
+@keyframes movedown{
+  0%{
+    transform: translateY(-200px);
+    visibility: visible;
+  }
+  100%{
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveup{
+  0%{
+    transform: translateY(200px);
+    visibility: visible;
+  }
+  100%{
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+
+
+@keyframes moveleft{
+  0%{
+    transform: translateX(-200px);
+    visibility: visible;
+  }
+  100%{
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveright{
+  0%{
+    transform: translateX(200px);
+    visibility: visible;
+  }
+  100%{
+    visibility: visible;
+    transform: translateX(0);
+  }
+}

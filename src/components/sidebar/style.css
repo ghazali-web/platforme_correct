@@ -1,0 +1,37 @@
+.sidebar {
+  height: 200%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #333;
+  width: 240px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  animation: moveleft 1s ease-in-out 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+.side-bar-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.side-bar-menu ul {
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 240px;
+}
+.side-bar-menu ul li {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  background-color: #999;
+  height: 50px;
+  padding-left: 30px;
+  align-items: center;
+  border-radius: 30px;
+}
