@@ -7,38 +7,38 @@ const sidebar = () => {
         <ul>
           <li>
             <a href="#" class="active">
-              <i class="fa fa-home"></i>
-              <i>Home</i>
+              <i class="fa fa-home" />
+              <span>Home</span>
             </a>
           </li>
           <li>
             <a href="#">
               <i class="fa fa-tasks"></i>
-              <i>Courses</i>
+              <span>Courses</span>
             </a>
           </li>
           <li>
             <a href="#">
               <i class="fa fa-th-large"></i>
-              <i>Teachers</i>
+              <span>Teachers</span>
             </a>
           </li>
           <li>
             <a href="#">
               <i class="fa fa-address-book"></i>
-              <i>A-propos</i>
+              <span>A-propos</span>
             </a>
           </li>
           <li>
             <a href="#">
               <i class="fa fa-clipboard"></i>
-              <i>projects</i>
+              <span>projects</span>
             </a>
           </li>
           <li>
             <a href="#">
               <i class="fa fa-user"></i>
-              <i>Contact</i>
+              <span>Contact</span>
             </a>
             </li>
             {/* sign in link  */}

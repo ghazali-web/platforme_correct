@@ -5,7 +5,7 @@ const Button = (props) => {
     alert("warning");
   };
   return (
-    <button onClick={Alert}>
+    <button style={props.styles} onClick={Alert}>
       <span>{props.text}</span>
       </button>
   );

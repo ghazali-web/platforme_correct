@@ -1,52 +1,47 @@
 import React from "react";
 import "../AboutUs/style.css";
 import "./style.css";
-import logo from "../../assets/images/e-learning-logo.jpg";
-import { Button, Image } from "../";
+import { styles } from "../AboutUs";
+import Button from "../Button";
 
 const Card = (props) => {
+  const { Icon3 } = props;
   return (
     <div className="card">
-      <span className="title-text-aboutus">{props.Instructor}</span>
-      <Image className="card-image" image={logo} />
-      <div className="card-stats">
-        <div>
-          <h1>{props.NameTeacher}</h1>
-          <span>{props.Module}</span>
-        </div>
-        <button>{props.text1}</button>
-        {/* -----1---------- */}
-        <div>
-          <i class={props.classNameIcon1}></i>
-          <span> {props.spantext1}</span>
-        </div>
-        {/* ----------2-------- */}
-        <div>
-          <i class={props.className2}></i>
-          <span> {props.spantext2}</span>
-        </div>
-        {/* ---------3---------  */}
-        <div>
-          <i class={props.className3}></i>
-          <span> {props.spantext3}</span>
-        </div>
-        {/* ----------4--------  */}
-        <div>
-          <i class={props.className4}></i>
-          <span> {props.spantext4}</span>
-        </div>
-        {/* ---------5-------- */}
-        <div>
-          <i class={props.className5}></i>
-          <span> {props.spantext5}</span>
-        </div>
+      <div className="header">
+        <span className="title-text-aboutus">{props.Instructor}</span>
       </div>
-      <button>{props.text2}</button>
-      <div className="bordure"></div>
-      <div className="supervisorModule">
-        <img src={props.img} />
-        <span>{props.nameSupervisor}</span>
-        <span>${props.Dollar}</span>
+      <div className="body">
+        <img className="card-image" src={props.img} />
+        <div className="card-stats">
+          <div className="flexrow">
+            <div className="flexcolumn">
+              <h1>{props.NameTeacher}</h1>
+              <span className="module">{props.Module}</span>
+            </div>
+            <button>{props.text1}</button>
+          </div>
+          {/* -----1---------- */}
+          <div className="flexrow">
+            <div>
+              <i className={props.classNameIcon1} />
+              <span> {props.spantext1}</span>
+            </div>
+            {/* ----------2-------- */}
+            <div>
+              <i className={props.classNameIcon2} />
+              <span> {props.spantext2}</span>
+            </div>
+            {/* ---------3---------  */}
+            <div>
+              <Icon3 color="red" size={32} />
+              <span> {props.spantext3}</span>
+            </div>
+            {/* ---------end3----------  */}
+          </div>
+
+          <Button styles={styles.button} text={props.text2} />
+        </div>
       </div>
     </div>
   );

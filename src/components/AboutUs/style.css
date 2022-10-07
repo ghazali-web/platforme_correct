@@ -2,51 +2,44 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex-basis: 1;
+  align-items: flex-start;
   justify-content: space-evenly;
   margin-top: 100px;
 }
 .video {
   width: 5px;
   height: 5px;
-  }
-.wlecome{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-basis: 1;
-  justify-content: space-between;
-  width: 425px;
-  height: 341px;
 }
-.title-text-aboutus{
-  color: #FE7558;
+.wlecome {
+  display: flex;
+  flex-direction: column;
+  width: 425px;
+  /* height: 341px; */
+}
+.title-text-aboutus {
+  color: #fe7558;
   width: 85px;
   height: 21px;
   font-size: small;
 }
-.title-text-text{
+.title-text-text {
   font-family: Roboto;
-  color: #2F374B;
+  color: #2f374b;
   font-size: xx-large;
 }
-.title-text-p{
-    font-family: Roboto;
-  color: #2F374B;
+.title-text-p {
+  font-family: Roboto;
+  color: #2f374b;
 }
-.title-text-nisl{
+.title-text-nisl {
   display: flex;
   flex-direction: column;
   width: 272px;
   height: 17px;
-  color: #2F374B;
+  color: #2f374b;
 }
-.LearnMore{
-  width: 100px;
-  height: 40px;
-  background-color: #FE7558;
-}
-.LearnMore text{
-  color: #FFFFFF;
+
+.LearnMore text {
+  color: #ffffff;
   font-size: medium;
 }
