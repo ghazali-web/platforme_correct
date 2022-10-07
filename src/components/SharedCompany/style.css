@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 100px;
-  animation: moveright 1s ease-in-out 1s;
+  animation: zoomIn 1s ease-in-out 1s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
   visibility: hidden;

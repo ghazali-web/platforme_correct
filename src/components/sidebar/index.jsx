@@ -40,7 +40,15 @@ const sidebar = () => {
               <i class="fa fa-user"></i>
               <i>Contact</i>
             </a>
-          </li>
+            </li>
+            {/* sign in link  */}
+            {/* <li>
+            <a className="signin" href="#">
+              <i class="fa fa-user"></i>
+              <i>Sign in</i>
+            </a>
+          </li> */}
+            {/* end sign in link  */}
         </ul>
       </div>
     </div>

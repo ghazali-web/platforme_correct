@@ -14,6 +14,7 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding: 0;
   margin: 0;
+
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -51,7 +52,6 @@ a:active {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 10px;
-  
 }
 .align-row {
   display: flex;
@@ -60,5 +60,4 @@ a:active {
   flex-basis: 1;
   justify-content: space-between;
   align-items: center;
-  
 }

@@ -1,46 +1,53 @@
-
-@keyframes movedown{
-  0%{
+@keyframes movedown {
+  0% {
     transform: translateY(-200px);
     visibility: visible;
   }
-  100%{
+  100% {
     visibility: visible;
     transform: translateY(0);
   }
 }
 
-@keyframes moveup{
-  0%{
+@keyframes moveup {
+  0% {
     transform: translateY(200px);
     visibility: visible;
   }
-  100%{
+  100% {
     visibility: visible;
     transform: translateY(0);
   }
 }
 
-
-
-@keyframes moveleft{
-  0%{
+@keyframes moveleft {
+  0% {
     transform: translateX(-200px);
     visibility: visible;
   }
-  100%{
+  100% {
     visibility: visible;
     transform: translateX(0);
   }
 }
 
-@keyframes moveright{
-  0%{
+@keyframes moveright {
+  0% {
     transform: translateX(200px);
     visibility: visible;
   }
-  100%{
+  100% {
     visibility: visible;
     transform: translateX(0);
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    visibility: visible;
+  }
+  100% {
+    transform: scale(1);
+    visibility: visible;
   }
 }

@@ -3,20 +3,22 @@
   align-items: center;
   justify-content: space-between;
   flex-basis: 1;
+  padding-left: 300px;
   /* position: absolute; */
 }
 .search-wrap {
   display: flex;
   border: 1px solid #008ea1;
   border-radius: 30px;
-  height: 38px;
+  height: 55px;
   align-items: center;
   overflow-x: hidden;
-  width: fit-content;
+  width: 300px;
 }
 .search-wrap input {
   border: none;
-  height: 0.8rem;
+  height: 2rem;
   padding: 0.5rem;
   outline: none;
+  width: 300px;
 }

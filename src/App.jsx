@@ -1,7 +1,9 @@
+import React from "react";
 import "./App.css";
-import {AboutUs,
+import {
+  Card,
+  AboutUs,
   SharedCompany,
-  Sidebar,
   Navbar,
   ElearningImages,
   StartLearning,
@@ -12,18 +14,19 @@ function App() {
       <header className="App-header">
         <Navbar />
       </header>
-      <Sidebar />
       <main className="Wrapper">
         <div className="align-row">
           <StartLearning />
+
           <ElearningImages />
-        <div>
-          <SharedCompany />
-        </div>
+          <div>
+            <SharedCompany />
+          </div>
         </div>
         <div>
           <AboutUs />
         </div>
+        <Card Instructor image NameTeacher Module classNameIcon1 spantext />
       </main>
     </div>
   );
