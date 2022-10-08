@@ -3,6 +3,7 @@ import "./style.css";
 import "../AboutUs/style.css";
 
 const CardSecond = (props) => {
+  const { Icon1, Icon2, Icon3, Icon4, Icon5 } = props;
   return (
     <div className="card">
       <div className="header">
@@ -16,27 +17,27 @@ const CardSecond = (props) => {
           {/* -----1---------- */}
           <div class="flexrow">
             <div>
-              <i class={props.classNameIcon1} />
+              <Icon1 color="red" size={32} />
               <span> {props.spantext1}</span>
             </div>
             {/* ----------2-------- */}
             <div>
-              <i class={props.className2}></i>
+              <Icon2 color="red" size={32} />
               <span> {props.spantext2}</span>
             </div>
             {/* ---------3---------  */}
             <div>
-              <i class={props.className3}></i>
+              <Icon3 color="red" size={32} />
               <span> {props.spantext3}</span>
             </div>
             {/* ----------4--------  */}
             <div>
-              <i class={props.className4}></i>
+              <Icon4 color="red" size={32} />
               <span> {props.spantext4}</span>
             </div>
             {/* ---------5-------- */}
             <div>
-              <i class={props.className5}></i>
+              <Icon5 color="red" size={32} />
               <span> {props.spantext5}</span>
             </div>
             {/* ------------end --------------  */}

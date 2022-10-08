@@ -46,6 +46,10 @@
   font-family: Roboto;
   font-size: 18;
 }
+.bordure{
+  border-inline: 1px solid #BEBEBE;
+  width: 100%;
+}
 .Dollar {
   color: #0a908a;
   font-family: Roboto;

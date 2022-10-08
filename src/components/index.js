@@ -11,3 +11,4 @@ export {default as SharedCompany} from "./SharedCompany"
 export {default as AboutUs}from "./AboutUs"
 // export {default as Animation}from "./animation"
 export {default as Video}from "./Video"
+export { default as CardSecond } from "./CardSecond";

@@ -2,15 +2,38 @@ import React from "react";
 import "./App.css";
 import logo from "./assets/images/uni-mit.png";
 import logo1 from "./assets/images/uni-nan.png";
-import {AiFillStar}from "react-icons/ai"
+import { AiFillStar } from "react-icons/ai";
+import { HiUserGroup } from "react-icons/hi";
+import { GiBookmarklet, GiRead, GiNetworkBars } from "react-icons/gi";
+import { Ri24HoursLine } from "react-icons/ri";
+
+import {
+  teacher1,
+  teacher2,
+  teacher3,
+  teacher4,
+} from "./assets/images/Teacher";
+import {
+  module1,
+  module2,
+  module3,
+  module4,
+  module5,
+  module6,
+  module7,
+  module8,
+  module9,
+} from "./assets/images/module";
 import {
   Card,
+  CardSecond,
   AboutUs,
   SharedCompany,
   Navbar,
   ElearningImages,
   StartLearning,
 } from "./components";
+
 function App() {
   return (
     <div className="App">
@@ -32,34 +55,34 @@ function App() {
 
         <Card
           Instructor={"Instructor"}
-          img={logo}
+          img={teacher1}
           NameTeacher={"Zain Khan"}
           Module={"UI/UX Designer"}
           text1={"Join Now"}
-          classNameIcon1={"fa-solid fa-graduation-cap"}
+          Icon1={GiBookmarklet}
           spantext1={"19 Courses"}
-          classNameIcon2={"fa-thin fa-screen-users"}
+          Icon2={HiUserGroup}
           spantext2={"25,599 Studients"}
-          // classNameIcon3={"fa-solid fa-star"}
           Icon3={AiFillStar}
           spantext3={"4.8"}
+          text2={"See More"}
         />
 
         {/* // ---------popular courses ------  */}
         {/* ------------second card-----------  */}
-        <Card
+        <CardSecond
           Instructor={"Students Favorite"}
           pouplar={"popular courses"}
-          img={logo1}
-          classNameIcon1={"fa-solid fa-star"}
+          img={module1}
+          Icon1={AiFillStar}
           spantext1={"4.8"}
-          classNameIcon2={"fa-thin fa-screen-users"}
+          Icon2={HiUserGroup}
           spantext2={"25,599 Studients"}
-          Icon3={AiFillStar}
+          Icon3={Ri24HoursLine}
           spantext3={"12 hrs 15min"}
-          classNameIcon4={"fa-sharp fa-solid fa-book-open-reader"}
+          Icon4={GiRead}
           spantext4={"Lecture"}
-          classNameIcon5={"fa-sharp fa-solid fa-signal"}
+          Icon5={GiNetworkBars}
           spantext5={"Medium"}
           // img={logo}
           nameSupervisor={"Kane Willsons"}

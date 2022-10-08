@@ -5,7 +5,7 @@ import { styles } from "../AboutUs";
 import Button from "../Button";
 
 const Card = (props) => {
-  const { Icon3 } = props;
+  const { Icon3,Icon2,Icon1 } = props;
   return (
     <div className="card">
       <div className="header">
@@ -24,12 +24,13 @@ const Card = (props) => {
           {/* -----1---------- */}
           <div className="flexrow">
             <div>
-              <i className={props.classNameIcon1} />
+              <Icon1 color="red" size={32} />
+              
               <span> {props.spantext1}</span>
             </div>
             {/* ----------2-------- */}
             <div>
-              <i className={props.classNameIcon2} />
+              <Icon2 color="red" size={32} />
               <span> {props.spantext2}</span>
             </div>
             {/* ---------3---------  */}
