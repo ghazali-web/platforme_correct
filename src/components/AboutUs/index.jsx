@@ -4,8 +4,16 @@ import anime from "../../assets/Video/Multimedia Application and Virtual Reality
 import "./style.css";
 import React from "react";
 import logo from "../../assets/images/ForEndImage.png";
+import { BsShieldFillCheck } from "react-icons/bs";
 export const styles = {
-  button: { width: "100px", height: "40px", background: "#fe7558" },
+  Dollar: { color: "#0a908a", fontFamily: "Roboto", fontSize: "18" },
+  p: { fontFamily: "Roboto", fontSize: "12px", color: "#ffffff" },
+  button: {
+    width: "100px",
+    height: "40px",
+    background: "#fe7558",
+    borderRadius: "30px",
+  },
 };
 const index = () => {
   return (
@@ -30,12 +38,12 @@ const index = () => {
         </p>
         <div className="title-text-nisl">
           <div>
-            <i class="fa-solid fa-shield-check"></i>
+            <BsShieldFillCheck />
             <span> Nisl nisi massa amet consequat</span>
           </div>
           {/* -----2------- */}
           <div>
-            <i class="fa-solid fa-shield-check"></i>
+            <BsShieldFillCheck />
             <span> Nisl nisi massa amet consequat</span>
           </div>
           <div>

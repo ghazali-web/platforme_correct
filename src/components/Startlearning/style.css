@@ -1,7 +1,14 @@
 @import url("../animation/style.css");
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .startlearning {
   display: felx;
+  margin-bottom: 200px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
@@ -17,24 +24,4 @@ h1 {
   font-family: Roboto;
   font-size: 70px;
   margin-left: 20px;
-  }
-.header {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: space-evenly;
-  height: 50px;
-}
-.StartLearn {
-  width: 100px;
-  height: 40px;
-  /* background-color: #fe7558; */
-}
-.StartLearn span {
-  font-family: Roboto;
-  font-size: 12px;
-  color: #ffffff;
-}
-.Discover {
-  border-radius:30px;
 }
