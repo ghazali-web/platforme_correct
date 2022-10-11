@@ -3,6 +3,7 @@ import "./style.css";
 const index = () => {
   return (
     <div>
+      
       <form>
         <label htmlFor="myfile">Select files:</label>
         <input type="file" id="myfile" name="myfile" multiple />

@@ -1,37 +1,48 @@
-import "style.css";
-import sign from ".."
 import React from "react";
-import {Button,Sign} from "../"
-import { MdEmail, RiLockPasswordFill } from "react-icons/md";
+import "./style.css"
+import { Button } from "../";
+import { MdEmail} from "react-icons/md";
+import {RiLockPasswordFill } from "react-icons/ri"
 import { FcGoogle } from "react-icons/fc";
-import {FaFacebook}from "react-icons/fa"
-import {AiFillTwitterCircle}from "react-icons/ai"
-const index = () => {
-  
+import { FaFacebook } from "react-icons/fa";
+import {  AiFillTwitterCircle } from "react-icons/ai";
+const Signin = () => {
+  const styles = {
+    button: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      borderRadius: "30px",
+      backgroundColor: "#283288",
+      color: "black",
+    },
+    
+  };
   return (
-  
-    <Sign 
-sign={"Sign In"}
-          // input begin 
-          // name 
-type1={"name"} name1={"name"} id1={"name"}
-// email 
-type2={"email"} name2={"email"} id2={"email"}
-// pasword 
-type3={"password"} name3={"password"} id3={"password"} 
-// input end 
-// button chekbox sign up 
-          // checkbox={} name4={} id4={}
-          // text button validation  sign up/In with terms and condition color
-          text={"Sign In"} 
-          // tetx1 signup with span signin color 
-          // text1={} 
-          // span signin color 
-          // text2={}
-/>
-          
-
+    <div>
+      <div className="headerSign">
+        <div className="signBody">
+          <h1 className="sign">Sign In</h1>
+          <div className="flexrow">
+            <MdEmail />
+            <input type="email" name="email" id="email" placeholder="Email" />
+          </div>
+          {/* ----------2----------------  */}
+          <div className="flexrow">
+            <RiLockPasswordFill />
+            <input type="password" name="password" id="password"  placeholder="Password"/>
+          </div>
+          <button />
+          <Button text={"Sign In"} styles={styles.button} />
+          <div className="socialMedia">
+            <FcGoogle />
+            <FaFacebook />
+            <AiFillTwitterCircle />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default index;
+export default Signin;

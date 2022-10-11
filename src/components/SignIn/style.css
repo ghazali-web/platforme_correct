@@ -1,0 +1,43 @@
+.headerSign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  background-color: #283288;
+}
+.signBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #ffffff;
+  height: 430px;
+  width: 745px;
+}
+.sign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+.socialMedia {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+span {
+  color: #283288;
+  font-weight: 624;
+  font-size: 14;
+}
+p {
+  color: #000000;
+  font-weight: 624;
+  font-size: 14;
+}

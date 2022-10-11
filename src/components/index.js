@@ -9,10 +9,10 @@ export { default as ElearningImages } from "./ElearningImage";
 export { default as StartLearning } from "./Startlearning";
 export { default as SharedCompany } from "./SharedCompany";
 export { default as AboutUs } from "./AboutUs";
-// export {default as Animation}from "./animation"
 export { default as Video } from "./Video";
 export { default as CardSecond } from "./cardSecond";
-// export { default as Input } from "./Input";
-// export { default as Sign } from "./Sign";
-// export {default as Signin} from "./Signin";
-// export {default as Signup} from "./Signup";
+export { default as SignIn } from "./SignIn";
+export { default as Signup } from "./SignUp";
+export { default as Chart } from "./statistique";
+export {default as Quiz} from "./Quiz"
+export {default as Switch} from "./switch"

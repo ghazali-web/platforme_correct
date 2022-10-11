@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Navbar ,Signin,Signup } from "./components";
+import { Chart, Navbar, Quiz, SignIn, Signup, Switch } from "./components";
 import { Aboutus, HeroBanner, Instructor, Courses } from "./sections";
 function App() {
   return (
@@ -13,8 +13,10 @@ function App() {
         <Aboutus />
         <Instructor />
         <Courses />
-        {/* <Signin /> */}
-        {/* <Signup /> */}
+        <Chart />
+        <Quiz />
+        <Switch />
+        {/* <Signup SignIn /> */}
       </main>
     </div>
   );
