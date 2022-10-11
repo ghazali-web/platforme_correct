@@ -1,9 +1,9 @@
 import * as React from "react";
+import "./style.css"
 import { styled } from "@mui/material/styles";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
@@ -11,6 +11,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   "& .MuiSwitch-switchBase": {
     margin: 1,
     padding: 0,
+    
     transform: "translateX(6px)",
     "&.Mui-checked": {
       color: "#fff",
@@ -50,12 +51,17 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     borderRadius: 20 / 2,
   },
 }));
-
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
 export default function CustomizedSwitches() {
   return (
     <FormGroup>
       <FormControlLabel
-        control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
+        control={
+          <MaterialUISwitch onClick={myFunction} sx={{ m: 1 }} defaultChecked />
+        }
         label="MUI Dark Mode"
       />
     </FormGroup>

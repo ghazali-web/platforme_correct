@@ -14,5 +14,6 @@ export { default as CardSecond } from "./cardSecond";
 export { default as SignIn } from "./SignIn";
 export { default as Signup } from "./SignUp";
 export { default as Chart } from "./statistique";
-export {default as Quiz} from "./Quiz"
-export {default as Switch} from "./switch"
+export { default as Quiz } from "./Quiz";
+export { default as Switch } from "./switchDarkMode";
+export { default as Game}from "./Game"

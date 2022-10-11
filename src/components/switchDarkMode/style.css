@@ -1,0 +1,7 @@
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+img {
+  filter: grayscale(20%);
+}
