@@ -10,20 +10,22 @@ import { GiBookmarklet } from "react-icons/gi";
 
 const Instructor = () => {
   return (
-    <Card
-      Instructor={"Instructor"}
-      img={teacher1}
-      NameTeacher={"Zain Khan"}
-      Module={"UI/UX Designer"}
-      text1={"Join Now"}
-      Icon1={GiBookmarklet}
-      spantext1={"19 Courses"}
-      Icon2={HiUserGroup}
-      spantext2={"25,599 Studients"}
-      Icon3={AiFillStar}
-      spantext3={"4.8"}
-      text2={"See More"}
-    />
+    <section id="Instructor">
+      <Card
+        Instructor={"Instructor"}
+        img={teacher1}
+        NameTeacher={"Zain Khan"}
+        Module={"UI/UX Designer"}
+        text1={"Join Now"}
+        Icon1={GiBookmarklet}
+        spantext1={"19 Courses"}
+        Icon2={HiUserGroup}
+        spantext2={"25,599 Studients"}
+        Icon3={AiFillStar}
+        spantext3={"4.8"}
+        text2={"See More"}
+      />
+    </section>
   );
 };
 

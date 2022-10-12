@@ -129,8 +129,8 @@ function accelerate(n) {
 }
 const index = () => {
   return (
-    <script onload="startGame()">
-      <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">
+    <script onLoad={startGame()}>
+      <button onmousedown={accelerate(-0.2)} onmouseup={accelerate(0.05)}>
         ACCELERATE
       </button>
       <p>Use the ACCELERATE button to stay in the air</p>

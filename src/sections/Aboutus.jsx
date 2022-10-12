@@ -3,9 +3,9 @@ import { AboutUs } from '../components';
 
 const Aboutus = () => {
   return (
-    <div>
+    <section id="Aboutus">
       <AboutUs />
-    </div>
+    </section>
   );
 }
 

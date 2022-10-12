@@ -3,14 +3,14 @@ import { ElearningImages, SharedCompany, StartLearning } from "../components";
 
 const HeroBanner = () => {
   return (
-    <div className="align-row">
+    <section id="HeroBanner" className="align-row">
       <StartLearning />
 
       <ElearningImages />
       <div>
         <SharedCompany />
       </div>
-    </div>
+    </section>
   );
 };
 

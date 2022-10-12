@@ -1,6 +1,14 @@
 import React from "react";
 import "./App.css";
-import { Chart, Game, Navbar, Quiz, SignIn, Signup, Switch } from "./components";
+import {
+  Chart,
+  Game,
+  Navbar,
+  Quiz,
+  SignIn,
+  Signup,
+  Switch,
+} from "./components";
 import { Aboutus, HeroBanner, Instructor, Courses } from "./sections";
 function App() {
   return (
@@ -15,8 +23,8 @@ function App() {
         <Courses />
         <Chart />
         {/* <Quiz /> */}
-        {/* <Switch /> */}
-        <Game />
+        <Switch />
+        {/* <Game /> */}
         {/* <Signup SignIn /> */}
       </main>
     </div>
