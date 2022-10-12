@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-const sidebar = () => {
+const index = () => {
   return (
     <div className="sidebar">
       <div class="side-bar-menu">
@@ -40,18 +40,18 @@ const sidebar = () => {
               <i class="fa fa-user"></i>
               <span>Contact</span>
             </a>
-            </li>
-            {/* sign in link  */}
-            {/* <li>
+          </li>
+          {/* sign in link  */}
+          {/* <li>
             <a className="signin" href="#">
               <i class="fa fa-user"></i>
               <i>Sign in</i>
             </a>
           </li> */}
-            {/* end sign in link  */}
+          {/* end sign in link  */}
         </ul>
       </div>
     </div>
   );
 };
-export default sidebar;
+export default index;

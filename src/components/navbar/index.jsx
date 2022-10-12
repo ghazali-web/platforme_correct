@@ -1,6 +1,6 @@
 import react from "react";
 import "./style.css";
-import { Image, SearchBar, Sidebar } from "..";
+import { Image, SearchBar, ComponentBar } from "..";
 import logo from "../../assets/images/uni-anu.png";
 const navbar = () => {
   return (
@@ -15,7 +15,7 @@ const navbar = () => {
           </h2>
         </div>
         <SearchBar />
-        <Sidebar />
+        <ComponentBar />
         <div id="dropdown" class="user-wrap">
           <Image image={logo} width="48" height="48" class="logo-admin" />
         </div>

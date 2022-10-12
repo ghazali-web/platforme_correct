@@ -1,5 +1,5 @@
 export { default as Navbar } from "./navbar";
-export { default as Sidebar } from "./sidebar";
+export { default as ComponentBar } from "./ComponentBar";
 export { default as Image } from "./Image";
 export { default as Button } from "./Button";
 export { default as Card } from "./Card";
