@@ -42,14 +42,10 @@ const index = () => {
             </a>
           </li>
           {/* sign in link  */}
-          {/* <li>
-            <a className="signin" href="#">
-              <i class="fa fa-user"></i>
-              <i>Sign in</i>
-            </a>
-          </li> */}
+
           {/* end sign in link  */}
         </ul>
+        
       </div>
     </div>
   );

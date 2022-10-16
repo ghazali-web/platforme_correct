@@ -1,5 +1,5 @@
 import react from "react";
-import { Image, Button } from "..";
+import { Image, Button, Video } from "..";
 import anime from "../../assets/Video/Multimedia Application and Virtual Reality - Introduction -26 Definitions.mp4";
 import "./style.css";
 import React from "react";
@@ -8,10 +8,22 @@ import { BsShieldFillCheck } from "react-icons/bs";
 export const styles = {
   Dollar: { color: "#0a908a", fontFamily: "Roboto", fontSize: "18" },
   p: { fontFamily: "Roboto", fontSize: "12px", color: "#ffffff" },
-  button: {
-    width: "100px",
+  SeeMore: {
+    width: "fit-content",
     height: "40px",
     background: "#fe7558",
+    borderRadius: "30px",
+  },
+  button: {
+    width: "fit-content",
+    height: "40px",
+    background: "#fe7558",
+    borderRadius: "30px",
+  },
+  Discover: {
+    width: "fit-content",
+    height: "40px",
+    background: "#fff",
     borderRadius: "30px",
   },
 };

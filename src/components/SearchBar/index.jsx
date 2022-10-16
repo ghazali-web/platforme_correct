@@ -1,4 +1,6 @@
 import React from "react";
+import { AiOutlineMenu } from "react-icons/ai";
+import { BsSearch } from "react-icons/bs";
 import "./style.css";
 const SearchBar = () => {
   return (
@@ -6,11 +8,11 @@ const SearchBar = () => {
       <header>
         <p>
           <label for="menu">
-            <i class="fa fa-bars"></i>
+            <AiOutlineMenu />
           </label>
         </p>
         <div class="search-wrap">
-          <i class="fa fa-search"></i>
+          <BsSearch />
           <input type="search" placeholder="recherche" />
         </div>
       </header>

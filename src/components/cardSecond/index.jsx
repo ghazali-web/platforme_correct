@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import "../AboutUs/style.css";
-import {styles} from "../AboutUs"
+import { styles } from "../AboutUs";
 const CardSecond = (props) => {
   const { Icon1, Icon2, Icon3, Icon4, Icon5 } = props;
   return (
@@ -46,7 +46,7 @@ const CardSecond = (props) => {
         <div className="bordure"></div>
 
         <div className="flexrow">
-          <img src={props.img} />
+          <img src={props.img2} />
           <p>{props.nameSupervisor}</p>
           <p style={styles.Dollar}>{props.Dollar}</p>
         </div>

@@ -1,7 +1,8 @@
-import react from "react";
 import "./style.css";
+// import "../SearchBar/style.css"
 import { Image, SearchBar, ComponentBar } from "..";
 import logo from "../../assets/images/uni-anu.png";
+
 const navbar = () => {
   return (
     <div className="container">
@@ -19,6 +20,7 @@ const navbar = () => {
         <div id="dropdown" class="user-wrap">
           <Image image={logo} width="48" height="48" class="logo-admin" />
         </div>
+        
       </div>
     </div>
   );

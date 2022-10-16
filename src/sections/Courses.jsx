@@ -1,6 +1,7 @@
 import React from 'react'
 import { CardSecond } from '../components';
 import module1 from "../assets/images/module/module1.png";
+import picTeacher from "../assets/images/Teacher/Group 232.png";
 import { AiFillStar } from "react-icons/ai";
 import { HiUserGroup } from "react-icons/hi";
 import {GiRead, GiNetworkBars } from "react-icons/gi";
@@ -23,7 +24,7 @@ const Courses = () => {
         spantext4={"Lecture"}
         Icon5={GiNetworkBars}
         spantext5={"Medium"}
-        // img={logo}
+        img2={picTeacher}
         nameSupervisor={"Kane Willsons"}
         Dollar={"$119.99"}
       />

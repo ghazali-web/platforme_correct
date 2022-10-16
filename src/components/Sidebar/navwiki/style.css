@@ -1,0 +1,25 @@
+/* begin navbar  */
+.navbarwiki {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* position: relative; */
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.nav-barwiki-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 1;
+  /* position: absolute; */
+}
+
+.learnwiki {
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: bold;
+  color: #26c32d;
+}

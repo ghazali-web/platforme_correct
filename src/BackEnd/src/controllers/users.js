@@ -4,8 +4,8 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 exports.Login = async (req, res, next) => {
   try {
-    const {email,password}=req.body
-    const data = await User.findOne({email});
+    const { email, password } = req.body;
+    const data = await User.findOne({ email });
     if (!data) return res.status(404).send("user not found");
     const isPassword = await bcrypt.compare(password, data.password);
     if (!isPassword) return res.status(404).send("invalid password ");
@@ -22,8 +22,8 @@ exports.Login = async (req, res, next) => {
 ///////////////////////////////
 exports.Signup = async (req, res) => {
   try {
-    const{email, password}=req.body;
-    const isUser = await User.findOne({ email});
+    const { email, password } = req.body;
+    const isUser = await User.findOne({ email });
     if (isUser) return res.status(202).send("this mail exist");
     const hasPassword = await bcrypt.hash(password, 10);
     const user = new User({
@@ -33,7 +33,7 @@ exports.Signup = async (req, res) => {
     const data = await user.save();
     res.status(202).json({ message: "signup  successfuly ", doc: data });
   } catch (error) {
-    return res.status(404).json({error:error});
+    return res.status(404).json({ error: error });
   }
 };
 ////////////////////////

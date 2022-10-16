@@ -1,9 +1,10 @@
 .container {
   /* position: fixed; */
   overflow: hidden;
-  animation: movedown 1s ease-in-out 1s;
+  animation: movedown  1s ease-in-out 1s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
+  width: 100%;
   visibility: visible;
 }
 /* begin navbar  */

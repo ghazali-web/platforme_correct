@@ -1,0 +1,8 @@
+.borderCourse {
+  display: flex;
+  border: thick double #32a1ce;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+  align-items: center;
+}

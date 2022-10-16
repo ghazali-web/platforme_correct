@@ -1,5 +1,5 @@
 @import url("../animation/style.css");
-.header {
+.headier {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

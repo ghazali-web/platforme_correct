@@ -12,9 +12,9 @@ const index = () => {
         sequi sit est soluta dolorem magni eos modi animi vitae impedit nemo
         molestias ipsum?
       </p>
-      <div className="header">
+      <div className="headier">
         <Button styles={styles.button} text={"Start Learning"} />
-        <Button styles={styles.button} text={"Discover"} />
+        <Button styles={styles.Discover} text={"Discover"} />
       </div>
     </div>
   );

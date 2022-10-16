@@ -16,4 +16,6 @@ export { default as Signup } from "./SignUp";
 export { default as Chart } from "./statistique";
 export { default as Quiz } from "./Quiz";
 export { default as Switch } from "./switchDarkMode";
-export { default as Game}from "./Game"
+export { default as Game } from "./Game";
+export { default as Home } from "./Home";
+export { default as Sidebar } from "./Sidebar";
