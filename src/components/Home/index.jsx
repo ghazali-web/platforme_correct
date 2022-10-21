@@ -1,6 +1,5 @@
-import { Switch } from "@mui/material";
 import React from "react";
-import { Chart, Navbar, Sidebar } from "../";
+import { Chart, FormCard, Navbar, Quiz, Sidebar } from "../";
 import { Aboutus, Courses, HeroBanner, Instructor } from "../../sections";
 const index = () => {
   return (
@@ -11,17 +10,14 @@ const index = () => {
       <main className="Wrapper">
         <HeroBanner />
         <Aboutus />
+        <FormCard />
         <Instructor />
         <Courses />
         <Sidebar />
         <Chart />
-        {/* <Quiz /> */}
-        <Switch />
-        {/* <Game /> */}
-        {/* <Signup SignIn /> */}
+        <Quiz />
       </main>
     </div>
   );
 };
-
 export default index;

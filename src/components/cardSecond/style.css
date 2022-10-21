@@ -1,5 +1,6 @@
 .card {
   width: 100px;
+  
 }
 .header {
   display: flex;
@@ -8,6 +9,7 @@
   /* flex-wrap: wrap; */
   justify-content: center;
   margin: 40px;
+  
 }
 
 .title-text-aboutus {
@@ -22,10 +24,11 @@
   font-size: xx-large;
 }
 .body {
-  background-color: #efebebfd;
-  width: fit-content;
-  height: fit-content;
+  background-color: #344955;
+  width: 350px;
+  height: 850px;
   border-radius: 20px;
+  height: fit-content;
 }
 .card-image {
   width: 304.81px;
@@ -64,12 +67,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 20px;
+  margin: 15px;
 }
 .flexcolumn {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 15px;
 }

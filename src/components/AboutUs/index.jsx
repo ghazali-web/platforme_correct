@@ -6,6 +6,7 @@ import React from "react";
 import logo from "../../assets/images/ForEndImage.png";
 import { BsShieldFillCheck } from "react-icons/bs";
 export const styles = {
+  img: { borderRadius: "50%" },
   Dollar: { color: "#0a908a", fontFamily: "Roboto", fontSize: "18" },
   p: { fontFamily: "Roboto", fontSize: "12px", color: "#ffffff" },
   SeeMore: {

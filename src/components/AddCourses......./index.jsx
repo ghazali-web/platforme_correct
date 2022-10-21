@@ -1,16 +1,9 @@
 import React, { useEffect } from "react";
 import "./style.css";
 import { useState } from "react";
-import { METHODS } from "http";
 import { Paper } from "@mui/material";
 
 // -------this is for getting from db ---------
-const [getcourse,setgetcourse]=useState([]);
-useEffect(()=>{
-  fetch("").then(res=>res.json()).then(result=>setgetcourse(result);
-},[])
-
-
 // useEffect(() => {
 //   fetch("/FormCourses")
 //     .then((res) => {
@@ -32,14 +25,21 @@ useEffect(()=>{
 //         variant=""
 //         value=""
 //         onChange={(e) => setcouse(e.target.value)}
-//       /> 
+//       />
 
+const [getcourse, setgetcourse] = useState([]);
+useEffect(() => {
+  // localhost:3000/user product ...etc
+  fetch("")
+    .then((res) => res.json())
+    .then((result) => setgetcourse(result));
+}, []);
 // -----------------this is for posting ------------------
 const [Dates, setDates] = useState("");
 const [Files, setFiles] = useState("");
 const handleclick = (e) => {
   e.preventDefault();
-  const course = [Dates, Files];
+  const course = { Dates, Files };
   fetch("", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -51,20 +51,16 @@ const handleclick = (e) => {
 
 const index = () => {
   return (
-
-
-<div className="borderCourse">
-      
-{getcourse.map((result,i)=>{
-  <Paper key={i}>Id:{getcourse.id} <br />
-  date:{getcourse.Date} <br />
-  file:{getcourse.File} <br />
-  </Paper>
-})}
-      
-      
-      
-      
+    //  Getting
+    <div className="borderCourse">
+      {getcourse.map((result, i) => {
+        <Paper key={i}>
+          Id:{getcourse.id} <br />
+          date:{getcourse.Date} <br />
+          file:{getcourse.File} <br />
+        </Paper>;
+      })}
+      {/* -------------------Posting---------------  */}
       <script value={Dates} onChange={(e) => setDates(e.target.value)}>
         date = new Date().toLocaleDateString(); document.write(date);
       </script>

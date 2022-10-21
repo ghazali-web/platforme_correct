@@ -1,11 +1,11 @@
 import React from "react";
-import "./style.css"
+import "./style.css";
 import { Button } from "../";
-import { MdEmail} from "react-icons/md";
-import {RiLockPasswordFill } from "react-icons/ri"
+import { MdEmail } from "react-icons/md";
+import { RiLockPasswordFill } from "react-icons/ri";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
-import {  AiFillTwitterCircle } from "react-icons/ai";
+import { AiFillTwitterCircle } from "react-icons/ai";
 const Signin = () => {
   const styles = {
     button: {
@@ -15,8 +15,8 @@ const Signin = () => {
       borderRadius: "30px",
       backgroundColor: "#283288",
       color: "black",
+      zIndex: "1",
     },
-    
   };
   return (
     <div>
@@ -30,7 +30,12 @@ const Signin = () => {
           {/* ----------2----------------  */}
           <div className="flexrow">
             <RiLockPasswordFill />
-            <input type="password" name="password" id="password"  placeholder="Password"/>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
           </div>
           <button />
           <Button text={"Sign In"} styles={styles.button} />

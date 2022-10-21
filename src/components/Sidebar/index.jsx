@@ -2,8 +2,7 @@ import "./style.css";
 import "../navbar/style.css";
 import "../SearchBar/style.css";
 import React from "react";
-import Navwiki from "./navwiki";
-import { Hellovietnam } from ".";
+import { Hellovietnam, Navwiki } from "..";
 const index = () => {
   return (
     <div className="container">

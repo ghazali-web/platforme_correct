@@ -15,32 +15,32 @@ const Card = (props) => {
         <div className="body">
           <img className="card-image" src={props.img} />
           <div className="card-stats">
-            <div className="flexrow">
-              <div className="flexcolumn">
-                <h1>{props.NameTeacher}</h1>
+            <div className="flexcolumn">
+                <p>{props.NameTeacher}</p>
+              <div className="flexrow">
                 <p className="module">{props.Module}</p>
                 <Button styles={styles.button} text={props.text1} />
               </div>
             </div>
             {/* -----1---------- */}
             <div className="flexrow">
-              <div>
+              <div className="flexrow">
                 <Icon1 color="red" size={32} />
 
                 <p> {props.spantext1}</p>
               </div>
               {/* ----------2-------- */}
-              <div>
+              <div className="flexrow">
                 <Icon2 color="red" size={32} />
                 <p> {props.spantext2}</p>
               </div>
               {/* ---------3---------  */}
-              <div>
+              <div className="flexrow">
                 <Icon3 color="red" size={32} />
                 <p> {props.spantext3}</p>
               </div>
               {/* ---------end3----------  */}
-            </div>
+            </div >
           </div>
         </div>
       </div>

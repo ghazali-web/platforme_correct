@@ -46,7 +46,7 @@ const CardSecond = (props) => {
         <div className="bordure"></div>
 
         <div className="flexrow">
-          <img src={props.img2} />
+          <img src={props.img2} styles={styles.img} />
           <p>{props.nameSupervisor}</p>
           <p style={styles.Dollar}>{props.Dollar}</p>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card } from "../components";
 import teacher1 from "../assets/images/Teacher/teacher1.png";
 import teacher2 from "../assets/images/Teacher/teacher2.png";
@@ -7,26 +7,67 @@ import teacher4 from "../assets/images/Teacher/teacher4.png";
 import { AiFillStar } from "react-icons/ai";
 import { HiUserGroup } from "react-icons/hi";
 import { GiBookmarklet } from "react-icons/gi";
-
+// --------------------------------------
 const Instructor = () => {
+  const [getCard, setgetCard] = useState([]);
+  useEffect(() => {
+    // localhost:3000/user product ...etc
+    fetch("localhost:3001/card/get_cards")
+      .then((res) => res.json())
+      .then((result) => setgetCard(result));
+  }, []);
+
+  // // -----------------------------------
+  // const [spantext3, setspantext3] = useState("");
+  // const [bool, setbool] = useState("false");
+  // const [increment, setincrement] = useState(258921);
+  // const aime = () => {
+  //   setincrement(increment + 1);
+  //   setbool(bool = false);
+  // };
+  // const aimeJamais = () => {
+  //   setincrement(increment - 1);
+  //   setbool(bool = true);
+  // };
+
+  // bool ? (
+  //     <button onClick={() => aime()} />
+  //   ) : (
+  //     <button onClick={() => aimeJamais} />
+  //   );
+
+  // const handleclick = (e) => {
+  //   e.preventDefault();
+  //   const starNbr = { spantext3 };
+  //   fetch("", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(starNbr),
+  //   }).then(() => {
+  //     console.log("New Student added");
+  //   });
+
   return (
     <section id="Instructor">
-      <Card
-        Instructor={"Instructor"}
-        img={teacher1}
-        NameTeacher={"Zain Khan"}
-        Module={"UI/UX Designer"}
-        text1={"Join Now"}
-        Icon1={GiBookmarklet}
-        spantext1={"19 Courses"}
-        Icon2={HiUserGroup}
-        spantext2={"25,599 Studients"}
-        Icon3={AiFillStar}
-        spantext3={"4.8"}
-        text2={"See More"}
-      />
+      {getCard.map((result, index) => {
+        <div key={index}>
+          <Card
+            Instructor={result.Instructor}
+            img={result.img}
+            NameTeacher={result.NameTeacher}
+            Module={result.Module}
+            text1={"Join Now"}
+            Icon1={GiBookmarklet}
+            spantext1={result.spantext1}
+            Icon2={HiUserGroup}
+            spantext2={result.spantext2}
+            Icon3={AiFillStar}
+            spantext3={result.spantext3}
+            text2={"See More"}
+          />
+        </div>;
+      })}
     </section>
   );
 };
-
 export default Instructor;

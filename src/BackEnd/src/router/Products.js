@@ -2,7 +2,7 @@ const express = require("express");
 const rout = express.Router();
 const multer = require("multer");
 const checkAuth = require("../middleware/checkAuth");
-const cards = require("../controllers/cards");
+const Products=require('../controllers/Products')
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "./uploads/");
@@ -28,14 +28,15 @@ const upload = multer({
   },
   fileFilter: fileFilter,
 });
-/*-----------------------------getting all  card-----------------------------*/
-rout.get("/", cards.get_cards_id);
-/*-----------------------------posting a card-----------------------------*/
-rout.post("/", checkAuth, upload.single("cardImage"), cards.post_cards);
-/*-----------------------------getting  card-----------------------------*/
-rout.get("/:cardId", cards.get_cards);
-/*-----------------------------update card-----------------------------*/
-rout.patch("/:cardId", cards.patch_cards);
-/*-----------------------------delete card-----------------------------*/
-rout.delete("/:delete", cards.delete_cards);
+/*-----------------------------getting all  product-----------------------------*/
+rout.get("/",Products.get_product_id);
+/*-----------------------------posting a product-----------------------------*/
+rout.post("/", checkAuth,upload.single("productImage")
+, Products.post_product);
+/*-----------------------------getting  product-----------------------------*/
+rout.get("/:productId", Products.get_product);
+/*-----------------------------update product-----------------------------*/
+rout.patch("/:productId",Products.patch_product);
+/*-----------------------------delete product-----------------------------*/
+rout.delete("/:delete", Products.delete_product);
 module.exports = rout;

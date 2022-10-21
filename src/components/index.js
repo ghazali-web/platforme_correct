@@ -19,3 +19,7 @@ export { default as Switch } from "./switchDarkMode";
 export { default as Game } from "./Game";
 export { default as Home } from "./Home";
 export { default as Sidebar } from "./Sidebar";
+export { default as Navwiki } from "./navwiki";
+export { default as Hellovietnam } from "./HelloVitenam";
+export{default as FormCard}from "./Formcards"
+

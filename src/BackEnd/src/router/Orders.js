@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const historiques = require("../controllers/historiques");
+const Oreders=require('../controllers/Ordres')
 /*-----------------------------get all orders-----------------------------*/
-router.get("/", historiques.get_Historique);
+router.get("/",Oreders.get_order);
 /*-----------------------------post order -----------------------------*/
-router.post("/", historiques.post_Historique);
+router.post("/", Oreders.post_order);
 /*-----------------------------update order-----------------------------*/
-router.patch("/:historiquesId", historiques.patch_Historique);
+router.patch("/:orderId",Oreders.patch_order);
 /*----------------------------delete order-----------------------------*/
-router.delete("/:delete", historiques.delete_Historique);
+router.delete("/:delete", Oreders.delete_order);
 module.exports = router;
