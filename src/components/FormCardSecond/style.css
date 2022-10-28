@@ -1,0 +1,14 @@
+.FormCardSeconds {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.FormCardSeconds input {
+  display: none;
+}
+.FormCardSeconds:hover input {
+  display: flex;
+  margin: 20px;
+  width: fit-content;
+}

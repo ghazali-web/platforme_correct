@@ -9,7 +9,7 @@ export { default as ElearningImages } from "./ElearningImage";
 export { default as StartLearning } from "./Startlearning";
 export { default as SharedCompany } from "./SharedCompany";
 export { default as AboutUs } from "./AboutUs";
-export { default as Video } from "./Video";
+export { default as Video } from "./Video/Video";
 export { default as CardSecond } from "./cardSecond";
 export { default as SignIn } from "./SignIn";
 export { default as Signup } from "./SignUp";
@@ -21,5 +21,5 @@ export { default as Home } from "./Home";
 export { default as Sidebar } from "./Sidebar";
 export { default as Navwiki } from "./navwiki";
 export { default as Hellovietnam } from "./HelloVitenam";
-export{default as FormCard}from "./Formcards"
-
+export { default as FormCard } from "./Formcards";
+export { default as FormCardSecond } from "./FormCardSecond";

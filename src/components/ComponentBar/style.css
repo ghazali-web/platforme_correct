@@ -34,16 +34,3 @@
 .side-bar-menu ul li:hover {
   background-color: #999;
 }
-.signin {
-  color: rgb(104, 85, 224);
-  background-color: rgba(255, 255, 255, 1);
-  border: 0px solid rgba(104, 85, 224, 1);
-  cursor: pointer;
-  align-items: center;
-}
-.sidebar:hover .signin {
-  color: white;
-  width: fit-content;
-  box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
-  background-color: rgba(104, 85, 224, 1);
-}

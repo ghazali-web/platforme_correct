@@ -6,13 +6,9 @@ const SearchBar = () => {
   return (
     <div class="content">
       <header>
-        <p>
-          <label for="menu">
-            <AiOutlineMenu />
-          </label>
-        </p>
+        
         <div class="search-wrap">
-          <BsSearch />
+          <BsSearch styles={{color: "red"}}/>
           <input type="search" placeholder="recherche" />
         </div>
       </header>

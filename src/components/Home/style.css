@@ -1,9 +1,25 @@
 .Wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  /* flex-basis: 1; */
+
+  margin-left: 240px;
+  margin-top: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+}
+.App-header {
+  width: 100%;
+}
+.align-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   flex-basis: 1;
-  
+  justify-content: space-between;
+  align-items: center;
 }

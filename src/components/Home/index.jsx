@@ -1,5 +1,6 @@
 import React from "react";
-import { Chart, FormCard, Navbar, Quiz, Sidebar } from "../";
+import "./style.css";
+import { Chart, FormCardSecond, FormCard, Navbar, Quiz, Sidebar } from "../";
 import { Aboutus, Courses, HeroBanner, Instructor } from "../../sections";
 const index = () => {
   return (
@@ -13,9 +14,9 @@ const index = () => {
         <FormCard />
         <Instructor />
         <Courses />
+        <FormCardSecond />
         <Sidebar />
         <Chart />
-        <Quiz />
       </main>
     </div>
   );

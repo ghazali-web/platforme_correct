@@ -20,7 +20,7 @@ const Formcard = () => {
       spantext2,
       spantext3,
     };
-    fetch("localhost :3001/card/post_cards", {
+    fetch("localhost :3002/cards/post_cards", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(course),
@@ -67,7 +67,7 @@ const Formcard = () => {
           type="text"
           name="spantext1"
           id="spantext1"
-          placeholder="spantext1"
+          placeholder="NbrBook"
           onChange={(e) => setspantext1(e.target.value)}
         />
 
@@ -75,18 +75,18 @@ const Formcard = () => {
           type="text"
           name="spantext2"
           id="spantext2"
-          placeholder="spantext2"
+          placeholder="NbrUserGroup"
           onChange={(e) => setspantext2(e.target.value)}
         />
         <input
           type="text"
           name="spantext3"
           id="spantext3"
-          placeholder="spantext3"
+          placeholder="NbrStar"
           onChange={(e) => setspantext3(e.target.value)}
         />
         <button variant="contained" color="secondary" onClick={handleclick}>
-          Submit
+          Add Teacher
         </button>
       </form>
     </div>

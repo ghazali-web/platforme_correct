@@ -72,7 +72,7 @@ const index = () => {
           type="file"
           id="myfile"
           name="myfile"
-          multiple="true"
+          multiple="false"
         />
         {/* <input  type="submit" /> */}
         <button variant="contained" color="secondary" onClick={handleclick}>

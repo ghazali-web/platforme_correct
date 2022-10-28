@@ -7,8 +7,8 @@ const ConfigRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="quiz" element={<Game />} />
-      <Route path="game" element={<Quiz />} />
+      <Route path="Game" element={<Game />} />
+      <Route path="Quiz" element={<Quiz />} />
       <Route path="signin" element={<SignIn />} />
       <Route path="signup" element={<Signup />} />
       <Route path="*" element={<h1>error</h1>} />

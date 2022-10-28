@@ -12,6 +12,7 @@ const Signup = () => {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
+      color: "black",
       borderRadius: "30px",
       backgroundColor: "#283288",
     },

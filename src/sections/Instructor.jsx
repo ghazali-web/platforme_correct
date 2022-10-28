@@ -12,7 +12,7 @@ const Instructor = () => {
   const [getCard, setgetCard] = useState([]);
   useEffect(() => {
     // localhost:3000/user product ...etc
-    fetch("localhost:3001/card/get_cards")
+    fetch("localhost:3002/card/get_cards")
       .then((res) => res.json())
       .then((result) => setgetCard(result));
   }, []);
@@ -52,7 +52,6 @@ const Instructor = () => {
       {getCard.map((result, index) => {
         <div key={index}>
           <Card
-            Instructor={result.Instructor}
             img={result.img}
             NameTeacher={result.NameTeacher}
             Module={result.Module}

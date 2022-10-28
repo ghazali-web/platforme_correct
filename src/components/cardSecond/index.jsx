@@ -7,8 +7,8 @@ const CardSecond = (props) => {
   return (
     <div className="card">
       <div className="header">
-        <p className="title-text-aboutus">{props.Instructor}</p>
-        <p className="title-text-pouplar">{props.pouplar}</p>
+        <p className="title-text-aboutus">{"Instructor"}</p>
+        <p className="title-text-pouplar">{"pouplar"}</p>
       </div>
       <div className="body">
         <img className="card-image" src={props.img} />

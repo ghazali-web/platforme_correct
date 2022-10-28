@@ -10,16 +10,16 @@ const Card = (props) => {
     <div className="card">
       <div>
         <div className="header">
-          <p className="title-text-aboutus">{props.Instructor}</p>
+          <p className="title-text-aboutus">{"Instructor"}</p>
         </div>
         <div className="body">
           <img className="card-image" src={props.img} />
           <div className="card-stats">
             <div className="flexcolumn">
-                <p>{props.NameTeacher}</p>
+              <p>{props.NameTeacher}</p>
               <div className="flexrow">
                 <p className="module">{props.Module}</p>
-                <Button styles={styles.button} text={props.text1} />
+                <Button styles={styles.button} text={"Join Now"} />
               </div>
             </div>
             {/* -----1---------- */}
@@ -40,11 +40,11 @@ const Card = (props) => {
                 <p> {props.spantext3}</p>
               </div>
               {/* ---------end3----------  */}
-            </div >
+            </div>
           </div>
         </div>
       </div>
-      <Button styles={styles.SeeMore} text={props.text2} />
+      <Button styles={styles.SeeMore} text={"SeeMore"} />
     </div>
   );
 };
