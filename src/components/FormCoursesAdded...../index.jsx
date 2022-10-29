@@ -5,7 +5,7 @@ import { Paper } from "@mui/material";
 const index = () => {
   const [getcourse, setgetcourse] = useState([]);
   useEffect(() => {
-    fetch("localhost:3002/FormCourses/get_FormCourse")
+    fetch("localhost:3002/formCourses/")
       .then((res) => res.json())
       .then((result) => setgetcourse(result));
   }, []);

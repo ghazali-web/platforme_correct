@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { Button } from "../";
 import { MdEmail } from "react-icons/md";
@@ -18,6 +18,20 @@ const Signin = () => {
       zIndex: "1",
     },
   };
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+  const handleclick = (e) => {
+    e.preventDefault();
+    const signin = { email, password };
+    fetch("localhost:3002/users/signin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(signin),
+    }).then(() => {
+      console.log("New signin");
+    });
+  };
+
   return (
     <div>
       <div className="headerSign">
@@ -25,7 +39,16 @@ const Signin = () => {
           <h1 className="sign">Sign In</h1>
           <div className="flexrow">
             <MdEmail />
-            <input type="email" name="email" id="email" placeholder="Email" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              styles={{ fontSize: "24px", color: "black" }}
+            />
+            <script value={email} onChange={(e) => setemail(e.target.value)}>
+              email=req.body.email;
+            </script>
           </div>
           {/* ----------2----------------  */}
           <div className="flexrow">
@@ -35,10 +58,20 @@ const Signin = () => {
               name="password"
               id="password"
               placeholder="Password"
+              styles={{ fontSize: "24px", color: "black" }}
             />
+            <script
+              value={password}
+              onChange={(e) => setpassword(e.target.value)}
+            >
+              email=req.body.password;
+            </script>
           </div>
-          <button />
-          <Button text={"Sign In"} styles={styles.button} />
+          <Button
+            text={"Sign In"}
+            styles={styles.button}
+            onClick={handleclick}
+          />
           <div className="socialMedia">
             <FcGoogle />
             <FaFacebook />

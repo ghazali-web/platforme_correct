@@ -20,7 +20,7 @@ const Formcard = () => {
       spantext2,
       spantext3,
     };
-    fetch("localhost :3002/cards/post_cards", {
+    fetch("localhost :3002/cards/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(course),

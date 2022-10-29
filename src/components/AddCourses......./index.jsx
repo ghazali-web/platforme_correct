@@ -27,14 +27,13 @@ import { Paper } from "@mui/material";
 //         onChange={(e) => setcouse(e.target.value)}
 //       />
 
-
 // -----------------this is for posting ------------------
 const [Dates, setDates] = useState("");
 const [Files, setFiles] = useState("");
 const handleclick = (e) => {
   e.preventDefault();
   const course = { Dates, Files };
-  fetch("localhost:3002/FormCourses/post_FormCourse", {
+  fetch("localhost:3002/formCourses/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(course),
@@ -47,13 +46,7 @@ const index = () => {
   return (
     //  Getting
     <div className="borderCourse">
-      {getcourse.map((result, i) => {
-        <Paper key={i}>
-          Id:{getcourse.id} <br />
-          date:{getcourse.Date} <br />
-          file:{getcourse.File} <br />
-        </Paper>;
-      })}
+   
       {/* -------------------Posting---------------  */}
       <script value={Dates} onChange={(e) => setDates(e.target.value)}>
         date = new Date().toLocaleDateString(); document.write(date);

@@ -25,7 +25,7 @@ const FormCardSecond = () => {
       NameSupervisor,
       Dollar,
     };
-    fetch("localhost :3001/SecondCards/post_secondCards", {
+    fetch("localhost :3002/SecondCards/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(course),
