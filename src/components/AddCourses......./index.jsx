@@ -27,20 +27,14 @@ import { Paper } from "@mui/material";
 //         onChange={(e) => setcouse(e.target.value)}
 //       />
 
-const [getcourse, setgetcourse] = useState([]);
-useEffect(() => {
-  // localhost:3000/user product ...etc
-  fetch("")
-    .then((res) => res.json())
-    .then((result) => setgetcourse(result));
-}, []);
+
 // -----------------this is for posting ------------------
 const [Dates, setDates] = useState("");
 const [Files, setFiles] = useState("");
 const handleclick = (e) => {
   e.preventDefault();
   const course = { Dates, Files };
-  fetch("", {
+  fetch("localhost:3002/FormCourses/post_FormCourse", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(course),

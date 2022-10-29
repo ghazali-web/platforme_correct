@@ -1,0 +1,12 @@
+.bordure {
+  border-style: solid;
+  color: black;
+  width: 100%;
+}
+.displayColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}

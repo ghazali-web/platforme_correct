@@ -6,3 +6,17 @@
   margin: 20px;
   align-items: center;
 }
+.formcards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.formcards input {
+  display: none;
+}
+.formcards:hover input {
+  display: flex;
+  margin: 20px;
+  width: fit-content;
+}
