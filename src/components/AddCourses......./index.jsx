@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import "./style.css";
 import { useState } from "react";
 import { Paper } from "@mui/material";
+import api from "../../api/posts";
+import { useNavigate } from "react-router-dom";
 
 // -------this is for getting from db ---------
 // useEffect(() => {
@@ -30,23 +32,33 @@ import { Paper } from "@mui/material";
 // -----------------this is for posting ------------------
 const [Dates, setDates] = useState("");
 const [Files, setFiles] = useState("");
-const handleclick = (e) => {
+const [posts, setPosts] = useState([]);
+const navigate = useNavigate();
+
+const handleclick = async (e) => {
   e.preventDefault();
   const course = { Dates, Files };
-  fetch("localhost:3002/formCourses/", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(course),
-  }).then(() => {
-    console.log("New Student added");
-  });
+  try {
+    const response = await api.post("/formCourses", course);
+    const allPosts = [...posts, response.data];
+    setPosts(allPosts);
+    navigate("/");
+  } catch (err) {
+    console.log(`Error: ${err.message}`);
+  }
+  //   fetch("localhost:3002/formCourses/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(course),
+  //   }).then(() => {
+  //     console.log("New Student added");
+  //   });
 };
 
 const index = () => {
   return (
     //  Getting
     <div className="borderCourse">
-   
       {/* -------------------Posting---------------  */}
       <script value={Dates} onChange={(e) => setDates(e.target.value)}>
         date = new Date().toLocaleDateString(); document.write(date);

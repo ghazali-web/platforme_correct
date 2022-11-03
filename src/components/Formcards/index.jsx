@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import "./style.css";
+import api from "../../api/posts";
+import { useNavigate } from "react-router-dom";
+
+// import { Route, Switch, useHistory } from "react-router-dom";
 
 const Formcard = () => {
   const [Instructor, setInstructor] = useState("");
@@ -9,7 +13,10 @@ const Formcard = () => {
   const [spantext1, setspantext1] = useState("");
   const [spantext2, setspantext2] = useState("");
   const [spantext3, setspantext3] = useState("");
-  const handleclick = (e) => {
+  const [posts, setPosts] = useState([]);
+  const navigate = useNavigate();
+
+  const handleclick = async (e) => {
     e.preventDefault();
     const course = {
       Instructor,
@@ -20,13 +27,14 @@ const Formcard = () => {
       spantext2,
       spantext3,
     };
-    fetch("localhost :3002/cards/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(course),
-    }).then(() => {
-      console.log("New card added");
-    });
+    try {
+      const response = await api.post("/cards", course);
+      const allPosts = [...posts, response.data];
+      setPosts(allPosts);
+      navigate("http://localhost:3002");
+    } catch (err) {
+      console.log(`Error: ${err.message}`);
+    }
   };
 
   return (

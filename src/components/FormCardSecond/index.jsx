@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import "./style.css"
+import "./style.css";
+import api from "../../api/posts";
+import { useNavigate } from "react-router-dom";
 const FormCardSecond = () => {
   const [Files, setFiles] = useState("");
   const [Module, setModule] = useState("");
@@ -11,7 +13,9 @@ const FormCardSecond = () => {
   const [Files2, setFiles2] = useState("");
   const [NameSupervisor, setNameSupervisor] = useState("");
   const [Dollar, setDollar] = useState("");
-  const handleclick = (e) => {
+  const [posts, setPosts] = useState([]);
+  const navigate = useNavigate();
+  const handleclick = async (e) => {
     e.preventDefault();
     const course = {
       Files,
@@ -25,13 +29,14 @@ const FormCardSecond = () => {
       NameSupervisor,
       Dollar,
     };
-    fetch("localhost :3002/SecondCards/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(course),
-    }).then(() => {
-      console.log("New Secondcard added");
-    });
+    try {
+      const response = await api.post("/SecondCards", course);
+      const allPosts = [...posts, response.data];
+      setPosts(allPosts);
+      navigate("/");
+    } catch (err) {
+      console.log(`Error: ${err.message}`);
+    }
   };
 
   return (

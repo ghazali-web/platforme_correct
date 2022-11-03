@@ -6,6 +6,8 @@ import { RiLockPasswordFill } from "react-icons/ri";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import { AiOutlineUserAdd, AiFillTwitterCircle } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
+import api from "../../api/posts";
 const Signup = () => {
   const styles = {
     button: {
@@ -22,28 +24,37 @@ const Signup = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [Name, setName] = useState("");
-  const handleclick = (e) => {
+  const [posts, setPosts] = useState([]);
+  const navigate = useNavigate();
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const signup = { email, password, Name };
-    fetch("localhost:3002/users/Signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(signup),
-    }).then(() => {
-      console.log("New signup");
-    });
+    try {
+      const response = await api.post("/users/signup", signup);
+      const allPosts = [...posts, response.data];
+      setPosts(allPosts);
+      navigate("/");
+    } catch (err) {
+      console.log(`Error: ${err.message}`);
+    }
   };
   return (
     <div>
       <div className="headerSign">
-        <div className="signBody">
+        <form className="signBody" onSubmit={handleSubmit}>
           <h1 className="sign">Sign Up</h1>
           <div className="flexrow">
             <AiOutlineUserAdd />
-            <input type="text" placeholder="Name" id="Name" />
-            <script value={Name} onChange={(e) => setName(e.target.value)}>
-              email=req.body.Name;
-            </script>
+            <input
+              type="text"
+              placeholder="Name"
+              onChange={(e) => setName(e.target.value)}
+              id="Name"
+              value={Name}
+            />
+            {/* <script value={Name} onChange={(e) => setName(e.target.value)}>
+              name=req.body.name;
+            </script> */}
           </div>
           <div className="flexrow">
             <MdEmail />
@@ -51,12 +62,14 @@ const Signup = () => {
               type="email"
               name="email"
               id="email"
+              value={email}
               placeholder="Email"
               styles={{ fontSize: "24px", color: "black" }}
+              onChange={(e) => setemail(e.target.value)}
             />
-            <script value={email} onChange={(e) => setemail(e.target.value)}>
+            {/* <script value={email} onChange={(e) => setemail(e.target.value)}>
               email=req.body.email;
-            </script>
+            </script> */}
           </div>
           {/* ----------2----------------  */}
           <div className="flexrow">
@@ -67,13 +80,15 @@ const Signup = () => {
               id="password"
               placeholder="Password"
               styles={{ fontSize: "24px", color: "black" }}
+              value={password}
+              onChange={(e) => setpassword(e.target.value)}
             />
-            <script
+            {/* <script
               value={password}
               onChange={(e) => setpassword(e.target.value)}
             >
-              email=req.body.password;
-            </script>
+              password=req.body.password;
+            </script> */}
           </div>
           <div className="flexrow">
             <input
@@ -86,11 +101,7 @@ const Signup = () => {
               I read and agree to<span>Terms & Conditions</span>
             </p>
           </div>
-          <Button
-            text={"Sign Up"}
-            styles={styles.button}
-            onClick={handleclick}
-          />
+          <Button text={"Sign Up"} styles={styles.button} />
           <div className="socialMedia">
             <p>
               Already a member?
@@ -100,7 +111,7 @@ const Signup = () => {
             <FaFacebook />
             <AiFillTwitterCircle />
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );
