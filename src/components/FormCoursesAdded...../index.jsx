@@ -1,14 +1,13 @@
 import "./style.css";
 import React from "react";
 import { Paper } from "@mui/material";
-import api from "../../api/posts";
-
+import {API} from "../../api/posts";
 const index = () => {
   const [getcourse, setgetcourse] = useState([]);
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await api.get("/formCourses");
+        const response = await API.get("/form");
         setgetcourse(response.data);
       } catch (err) {
         if (err.response) {

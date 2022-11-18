@@ -1,51 +1,44 @@
 import React, { useEffect } from "react";
 import "./style.css";
 import { useState } from "react";
-import { Paper } from "@mui/material";
-import api from "../../api/posts";
+import { API } from "../../api/posts";
 import { useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
+const index = () => {
+  const navigate = useNavigate();
+  const formik = useFormik({
+    initialValues: {
+      date: "",
+      file: "",
+    },
+    onSubmit: (values) => {
+      console.log(values);
+      const formData = new FormData();
+      for (let value in values) {
+        formData.append(value, values[value]);
+      }
+      axios.post("/form", formData);
+      navigate("/");
+    },
+  });
 
-// -------this is for getting from db ---------
-// useEffect(() => {
-//   fetch("/FormCourses")
-//     .then((res) => {
-//       if (res.ok) {
-//         return res.json();
-//       }
-//     })
-//     .then((resjson) => {
-//       setcouse(resjson);
-//     });
-// });
-//  {course.map((fromcourse) => {
-//         <p>{fromcourse}</p>;
-//       })}
+  // -----------------this is for posting ------------------
+  // const [date, setdate] = useState("");
+  // const [file, setfile] = useState("");
+  // const [posts, setPosts] = useState([]);
 
-//  <TextField
-//         id=""
-//         label=""
-//         variant=""
-//         value=""
-//         onChange={(e) => setcouse(e.target.value)}
-//       />
+  // const handleclick = async (e) => {
+  //   e.preventDefault();
+  //   const course = { date, file };
+  //   try {
+  //     const response = await api.post("/form", course);
+  //     const allPosts = [...posts, response.data];
+  //     setPosts(allPosts);
+  //     navigate("/");
+  //   } catch (err) {
+  //     console.log(`Error: ${err.message}`);
+  //   }
 
-// -----------------this is for posting ------------------
-const [Dates, setDates] = useState("");
-const [Files, setFiles] = useState("");
-const [posts, setPosts] = useState([]);
-const navigate = useNavigate();
-
-const handleclick = async (e) => {
-  e.preventDefault();
-  const course = { Dates, Files };
-  try {
-    const response = await api.post("/formCourses", course);
-    const allPosts = [...posts, response.data];
-    setPosts(allPosts);
-    navigate("/");
-  } catch (err) {
-    console.log(`Error: ${err.message}`);
-  }
   //   fetch("localhost:3002/formCourses/", {
   //     method: "POST",
   //     headers: { "Content-Type": "application/json" },
@@ -53,28 +46,34 @@ const handleclick = async (e) => {
   //   }).then(() => {
   //     console.log("New Student added");
   //   });
-};
+  // };
 
-const index = () => {
   return (
     //  Getting
     <div className="borderCourse">
       {/* -------------------Posting---------------  */}
-      <script value={Dates} onChange={(e) => setDates(e.target.value)}>
-        date = new Date().toLocaleDateString(); document.write(date);
-      </script>
-      <form>
+      <form
+        onSubmit={formik.handleSubmit}
+        method="post"
+        encType="multipart/form-data"
+      >
+        <script
+          name="date"
+          value={formik.values.date}
+          onChange={formik.handleChange}
+        >
+          date = new Date().toLocaleDateString(); document.write(date);
+        </script>
         <label htmlFor="myfile">Select files:</label>
         <input
-          value={Files}
-          onChange={(e) => setFiles(e.target.value)}
           type="file"
-          id="myfile"
-          name="myfile"
           multiple="false"
+          name="file"
+          value={formik.values.file}
+          onChange={formik.handleChange}
         />
         {/* <input  type="submit" /> */}
-        <button variant="contained" color="secondary" onClick={handleclick}>
+        <button variant="contained" color="secondary">
           Submit
         </button>
       </form>

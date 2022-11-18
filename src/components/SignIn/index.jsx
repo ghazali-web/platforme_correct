@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import api from "../../api/posts";
+import {API} from "../../api/posts";
 import "./style.css";
 import { Button } from "../";
 import { MdEmail } from "react-icons/md";
@@ -29,7 +29,7 @@ const Signin = () => {
     e.preventDefault();
     const signin = { email, password };
     try {
-      const response = await api.post("/users/signin", signin);
+      const response = await API.post("/users/signin", signin);
       const allPosts = [...posts, response.data];
       setPosts(allPosts);
       navigate("http://localhost:3002");
@@ -40,7 +40,12 @@ const Signin = () => {
 
   return (
     <div>
-      <div className="headerSign">
+      <form
+        className="headerSign"
+        method="post"
+        enctype="multipart/form-data"
+        onSubmit={handleclick}
+      >
         <div className="signBody">
           <h1 className="sign">Sign In</h1>
           <div className="flexrow">
@@ -77,18 +82,14 @@ const Signin = () => {
               password=req.body.password;
             </script> */}
           </div>
-          <Button
-            text={"Sign In"}
-            styles={styles.button}
-            onClick={handleclick}
-          />
+          <Button text={"Sign In"} styles={styles.button} />
           <div className="socialMedia">
             <FcGoogle />
             <FaFacebook />
             <AiFillTwitterCircle />
           </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 };

@@ -1,99 +1,129 @@
 import React, { useState } from "react";
 import "./style.css";
-import api from "../../api/posts";
+import { creatProduct } from "../../api/posts";
 import { useNavigate } from "react-router-dom";
-
+import { useFormik } from "formik";
 // import { Route, Switch, useHistory } from "react-router-dom";
-
 const Formcard = () => {
-  const [Instructor, setInstructor] = useState("");
-  const [Files, setFiles] = useState("");
-  const [NameTeacher, setNameTeacher] = useState("");
-  const [Module, setModule] = useState("");
-  const [spantext1, setspantext1] = useState("");
-  const [spantext2, setspantext2] = useState("");
-  const [spantext3, setspantext3] = useState("");
-  const [posts, setPosts] = useState([]);
   const navigate = useNavigate();
+  const formik = useFormik({
+    initialValues: {
+      imagesCard: "",
+      NameTeacher: "",
+      Module: "",
+      spantext1: "",
+      spantext2: "",
+      spantext3: "",
+    },
+    
+    onSubmit: (values) => {
+      console.log(values);
+      const formData = new FormData();
+      for (let value in values) {
+        formData.append(value, values[value]);
+      }
+      creatProduct(formData); //this for posting with axios
+      navigate("/");
+    },
+  });
 
-  const handleclick = async (e) => {
-    e.preventDefault();
-    const course = {
-      Instructor,
-      Files,
-      NameTeacher,
-      Module,
-      spantext1,
-      spantext2,
-      spantext3,
-    };
-    try {
-      const response = await api.post("/cards", course);
-      const allPosts = [...posts, response.data];
-      setPosts(allPosts);
-      navigate("http://localhost:3002");
-    } catch (err) {
-      console.log(`Error: ${err.message}`);
-    }
-  };
+  // const [imagesCard, setimagesCard] = useState("");
+  // const [NameTeacher, setNameTeacher] = useState("");
+  // const [Module, setModule] = useState("");
+  // const [spantext1, setspantext1] = useState("");
+  // const [spantext2, setspantext2] = useState("");
+  // const [spantext3, setspantext3] = useState("");
+  // const [posts, setPosts] = useState([]);
+
+  // const handleclick = async (e) => {
+  //   e.preventDefault();
+  //   const course = {
+  //     imagesCard,
+  //     NameTeacher,
+  //     Module,
+  //     spantext1,
+  //     spantext2,
+  //     spantext3,
+  //   };
+  //   try {
+  //     const response = await creatProduct(course);
+  //     const allPosts = [...posts, response.data];
+  //     setPosts(allPosts);
+  //     navigate("/");
+  //   } catch (err) {
+  //     console.log(`Error: ${err.message}`);
+  //   }
+  // };
 
   return (
     <div className="formcards">
-      <form>
-        <input
+      <form
+        onSubmit={formik.handleSubmit}
+        method="post"
+        enctype="multipart/form-data"
+      >
+        {/* <input
           type="text"
           name="Instructor"
           id="Instructor"
           placeholder="Instructor"
           onChange={(e) => setInstructor(e.target.value)}
-        />
-        <label htmlFor="myfile">Select images:</label>
+        /> */}
+        <label htmlFor="myfilecard">Select images:</label>
         <input
-          value={Files}
-          onChange={(e) => setFiles(e.target.value)}
           type="file"
-          id="myfile"
-          name="myfile"
+          id="myfilecard"
           accept="image/*"
-          multiple="false"
-        />
-        <input
-          type="text"
-          name="NameTeacher"
-          id="NameTeacher"
-          placeholder="NameTeacher"
-          onChange={(e) => setNameTeacher(e.target.value)}
-        />
-        <input
-          type="text"
-          name="Module"
-          id="Module"
-          placeholder="Module"
-          onChange={(e) => setModule(e.target.value)}
-        />
-        <input
-          type="text"
-          name="spantext1"
-          id="spantext1"
-          placeholder="NbrBook"
-          onChange={(e) => setspantext1(e.target.value)}
+          multiple={false}
+          name="imagesCard"
+          value={formik.values.imagesCard}
+          onChange={(e) =>
+            formik.setFieldValue("imagesCard", e.currentTarget.files[0])
+          }
         />
 
         <input
           type="text"
-          name="spantext2"
-          id="spantext2"
-          placeholder="NbrUserGroup"
-          onChange={(e) => setspantext2(e.target.value)}
+          name="NameTeacher"
+          id="NameTeachercard"
+          placeholder="NameTeacher"
+          value={formik.values.NameTeacher}
+          onChange={formik.handleChange}
         />
         <input
           type="text"
-          name="spantext3"
-          id="spantext3"
-          placeholder="NbrStar"
-          onChange={(e) => setspantext3(e.target.value)}
+          id="Modulecard"
+          placeholder="Module"
+          name="Module"
+          value={formik.values.Module}
+          onChange={formik.handleChange}
         />
-        <button variant="contained" color="secondary" onClick={handleclick}>
+        <input
+          type="text"
+          id="spantext1card"
+          placeholder="NbrBook"
+          name="spantext1"
+          value={formik.values.spantext1}
+          onChange={formik.handleChange}
+        />
+
+        <input
+          type="text"
+          id="spantext2card"
+          placeholder="NbrUserGroup"
+          name="spantext2"
+          value={formik.values.spantext2}
+          onChange={formik.handleChange}
+        />
+        <input
+          type="text"
+          id="spantext3card"
+          placeholder="NbrStar"
+          name="spantext3"
+          value={formik.values.spantext3}
+          onChange={formik.handleChange}
+        />
+        <button variant="contained" color="secondary">
           Add Teacher
         </button>
       </form>

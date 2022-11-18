@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../SignIn/style.css";
 import { Button } from "../";
 import { MdEmail } from "react-icons/md";
@@ -7,7 +7,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import { AiOutlineUserAdd, AiFillTwitterCircle } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import api from "../../api/posts";
+import {API} from "../../api/posts";
 const Signup = () => {
   const styles = {
     button: {
@@ -30,7 +30,7 @@ const Signup = () => {
     e.preventDefault();
     const signup = { email, password, Name };
     try {
-      const response = await api.post("/users/signup", signup);
+      const response = await API.post("/users/signup", signup);
       const allPosts = [...posts, response.data];
       setPosts(allPosts);
       navigate("/");
@@ -41,16 +41,21 @@ const Signup = () => {
   return (
     <div>
       <div className="headerSign">
-        <form className="signBody" onSubmit={handleSubmit}>
+        <form
+          className="signBody"
+          method="post"
+          enctype="multipart/form-data"
+          onSubmit={handleSubmit}
+        >
           <h1 className="sign">Sign Up</h1>
           <div className="flexrow">
             <AiOutlineUserAdd />
             <input
               type="text"
               placeholder="Name"
-              onChange={(e) => setName(e.target.value)}
               id="Name"
               value={Name}
+              onChange={(e) => setName(e.target.value)}
             />
             {/* <script value={Name} onChange={(e) => setName(e.target.value)}>
               name=req.body.name;
@@ -101,7 +106,7 @@ const Signup = () => {
               I read and agree to<span>Terms & Conditions</span>
             </p>
           </div>
-          <Button text={"Sign Up"} styles={styles.button} />
+          <Button type="submit" text={"Sign Up"} styles={styles.button} />
           <div className="socialMedia">
             <p>
               Already a member?

@@ -16,7 +16,7 @@ const Courses = () => {
   const [getCardSecond, setgetCardSecond] = useState([]);
   useEffect(() => {
     // localhost:3000/user product ...etc
-    fetch("localhost:3002/SecondCards/get_secondCards_id")
+    fetch("localhost:3002/secondCardsRouter")
       .then((res) => res.json())
       .then((result) => setgetCardSecond(result));
   }, []);

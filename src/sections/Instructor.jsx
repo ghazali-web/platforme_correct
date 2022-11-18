@@ -12,7 +12,7 @@ const Instructor = () => {
   const [getCard, setgetCard] = useState([]);
   useEffect(() => {
     // localhost:3000/user product ...etc
-    fetch("localhost:3002/card/get_cards")
+    fetch("localhost:3002/card")
       .then((res) => res.json())
       .then((result) => setgetCard(result));
   }, []);
