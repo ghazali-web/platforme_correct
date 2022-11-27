@@ -43,7 +43,7 @@ const Signin = () => {
       <form
         className="headerSign"
         method="post"
-        enctype="multipart/form-data"
+        encType="multipart/form-data"
         onSubmit={handleclick}
       >
         <div className="signBody">

@@ -15,7 +15,6 @@ const Formcard = () => {
       spantext2: "",
       spantext3: "",
     },
-    
     onSubmit: (values) => {
       console.log(values);
       const formData = new FormData();
@@ -57,11 +56,7 @@ const Formcard = () => {
 
   return (
     <div className="formcards">
-      <form
-        onSubmit={formik.handleSubmit}
-        method="post"
-        enctype="multipart/form-data"
-      >
+      <form method="post" encType="multipart/form-data">
         {/* <input
           type="text"
           name="Instructor"
@@ -76,7 +71,7 @@ const Formcard = () => {
           accept="image/*"
           multiple={false}
           name="imagesCard"
-          value={formik.values.imagesCard}
+          // value={formik.values.imagesCard}
           onChange={(e) =>
             formik.setFieldValue("imagesCard", e.currentTarget.files[0])
           }
@@ -123,7 +118,12 @@ const Formcard = () => {
           value={formik.values.spantext3}
           onChange={formik.handleChange}
         />
-        <button variant="contained" color="secondary">
+        <button
+          onSubmit={formik.handleSubmit}
+          type="submit"
+          variant="contained"
+          color="secondary"
+        >
           Add Teacher
         </button>
       </form>

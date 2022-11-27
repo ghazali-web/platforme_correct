@@ -8,12 +8,12 @@ const styles = {
 const index = () => {
   return (
     <div className="navbarwiki">
-      <div class="nav-barwiki-brand">
+      <div className="nav-barwiki-brand">
         <div>
           <SiWikipedia />
           <p className="learnwiki">Wikipedia</p>
         </div>
-        <div class="search-wrap">
+        <div className="search-wrap">
           <BsSearch />
           <input type="search" placeholder="recherche" />
         </div>

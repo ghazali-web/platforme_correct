@@ -4,11 +4,10 @@ import { BsSearch } from "react-icons/bs";
 import "./style.css";
 const SearchBar = () => {
   return (
-    <div class="content">
+    <div className="content">
       <header>
-        
-        <div class="search-wrap">
-          <BsSearch styles={{color: "red"}}/>
+        <div className="search-wrap">
+          <BsSearch styles={{ color: "red" }} />
           <input type="search" placeholder="recherche" />
         </div>
       </header>

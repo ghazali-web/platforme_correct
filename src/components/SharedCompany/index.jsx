@@ -12,9 +12,9 @@ const index = () => {
   return (
     <div className="headerShared">
       <div className="partner">
-        <p>
+        <span>
           <h1> 25k</h1>Companies that partner with us
-        </p>
+        </span>
       </div>
       <div className="partnerLogo">
         <Image image={elipse1} />

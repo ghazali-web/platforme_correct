@@ -63,7 +63,7 @@ const FormCardSecond = () => {
 
   return (
     <div className="FormCardSeconds">
-      <form method="post" enctype="multipart/form-data">
+      <form method="post" encType="multipart/form-data">
         <label htmlFor="myfile">Select images:</label>
         <input
           type="file"

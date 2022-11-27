@@ -4,6 +4,7 @@ import { SignIn, Signup, Home, Navbar, Game, Quiz } from "../components";
 import { Courses, Instructor } from "../sections";
 
 const ConfigRouter = () => {
+  
   return (
     <Routes>
       <Route path="/" element={<Home />} />

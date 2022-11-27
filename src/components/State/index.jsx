@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../Button";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 const index = (props) => {
-  const [page, SetPage] = react.useState({
+  const [page, setPage] = react.useState({
     nameSignup: page.istrue ? (
       <div styles={styles.flexrow}>
         <AiOutlineUserAdd />
@@ -47,7 +47,7 @@ const index = (props) => {
     istrue: "true",
   });
   function toggleFavorite() {
-    SetPage((prevContact) => {
+    setPage((prevContact) => {
       prevContact: !prevContact.istrue;
     });
   }

@@ -44,7 +44,7 @@ const Signup = () => {
         <form
           className="signBody"
           method="post"
-          enctype="multipart/form-data"
+          encType="multipart/form-data"
           onSubmit={handleSubmit}
         >
           <h1 className="sign">Sign Up</h1>

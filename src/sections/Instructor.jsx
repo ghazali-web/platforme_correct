@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Card } from "../components";
+import {API}from "../api/posts"
 import teacher1 from "../assets/images/Teacher/teacher1.png";
 import teacher2 from "../assets/images/Teacher/teacher2.png";
 import teacher3 from "../assets/images/Teacher/teacher3.png";
@@ -10,12 +11,31 @@ import { GiBookmarklet } from "react-icons/gi";
 // --------------------------------------
 const Instructor = () => {
   const [getCard, setgetCard] = useState([]);
+
   useEffect(() => {
-    // localhost:3000/user product ...etc
-    fetch("localhost:3002/card")
-      .then((res) => res.json())
-      .then((result) => setgetCard(result));
+    const fetchPosts = async () => {
+      try {
+        const response = await API.get("/card");
+        setgetCard(response.data);
+      } catch (err) {
+        if (err.response) {
+          // Not in the 200 response range
+          console.log(err.response.data);
+          console.log(err.response.status);
+          console.log(err.response.headers);
+        } else {
+          console.log(`Error: ${err.message}`);
+        }
+      }
+    };
+    fetchPosts();
   }, []);
+  // useEffect(() => {
+  //   // localhost:3000/user product ...etc
+  //   fetch("localhost:3002/card")
+  //     .then((res) => res.json())
+  //     .then((result) => setgetCard(result));
+  // }, []);
 
   // // -----------------------------------
   // const [spantext3, setspantext3] = useState("");

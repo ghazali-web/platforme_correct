@@ -10,7 +10,7 @@ import { Quiz, Switch } from "..";
 const ElearningImage = () => {
   return (
     <div className="drop">
-      <div class="drop-down-content">
+      <div className="drop-down-content">
         <ul>
           <li>
             <FaSignInAlt />
