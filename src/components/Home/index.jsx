@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Chart, FormCardSecond, FormCard, Navbar, Quiz, Sidebar } from "../";
+import { Chart, FormCardSecond, FormCard, Navbar, Sidebar } from "../";// Quiz,
 import { Aboutus, Courses, HeroBanner, Instructor } from "../../sections";
 const index = () => {
   return (

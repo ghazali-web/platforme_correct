@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import module1 from "../assets/images/module/module1.png";
-import picTeacher from "../assets/images/Teacher/teacher1.png";
-import { AiFillStar } from "react-icons/ai";
-import { HiUserGroup } from "react-icons/hi";
-import { GiRead, GiNetworkBars } from "react-icons/gi";
-import { Ri24HoursLine } from "react-icons/ri";
+// import module1 from "../assets/images/module/module1.png";
+// import picTeacher from "../assets/images/Teacher/teacher1.png";
+// import { AiFillStar } from "react-icons/ai";
+// import { HiUserGroup } from "react-icons/hi";
+// import { GiRead, GiNetworkBars } from "react-icons/gi";
+// import { Ri24HoursLine } from "react-icons/ri";
 import { CardSecond } from "../components";
-import teacher1 from "../assets/images/Teacher/teacher1.png";
-import teacher2 from "../assets/images/Teacher/teacher2.png";
-import teacher3 from "../assets/images/Teacher/teacher3.png";
-import teacher4 from "../assets/images/Teacher/teacher4.png";
-import { GiBookmarklet } from "react-icons/gi";
-import {API} from "../api/posts"
+// import teacher1 from "../assets/images/Teacher/teacher1.png";
+// import teacher2 from "../assets/images/Teacher/teacher2.png";
+// import teacher3 from "../assets/images/Teacher/teacher3.png";
+// import teacher4 from "../assets/images/Teacher/teacher4.png";
+// import { GiBookmarklet } from "react-icons/gi";
+import { API } from "../api/posts";
 const Courses = () => {
   const [getCardSecond, setgetCardSecond] = useState([]);
   useEffect(() => {
@@ -41,7 +41,7 @@ const Courses = () => {
   // }, []);
   return (
     <section id="Courses">
-      {getCardSecond.map((result, index) => {
+      {getCardSecond.map((result, index) => (
         <div key={index}>
           <CardSecond
             img={result.Files}
@@ -55,8 +55,8 @@ const Courses = () => {
             nameSupervisor={result.NameSupervisor}
             Dollar={result.Dollar}
           />
-        </div>;
-      })}
+        </div>
+      ))}
     </section>
   );
 };

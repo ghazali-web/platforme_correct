@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";//, { useState }
 import "./style.css";
 import {creatProductSecond} from "../../api/posts";
 import { useNavigate } from "react-router-dom";

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { FaSignInAlt } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineLogout } from "react-icons/ai";
-import { Quiz, Switch } from "..";
+import {  Switch } from "..";//Quiz,
 const ElearningImage = () => {
   return (
     <div className="drop">
@@ -36,7 +36,7 @@ const ElearningImage = () => {
         </ul>
       </div>
       <div className="web-app-image">
-        <Image image={logo} />
+        <Image image={logo} alt="logo"/>
       </div>
     </div>
   );

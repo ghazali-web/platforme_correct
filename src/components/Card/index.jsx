@@ -13,7 +13,7 @@ const Card = (props) => {
           <p className="title-text-aboutus">{"Instructor"}</p>
         </div>
         <div className="body">
-          <img className="card-image" src={props.img} />
+          <img className="card-image" alt="imagesCard" src={props.img} />
           <div className="card-stats">
             <div className="flexcolumn">
               <p>{props.NameTeacher}</p>

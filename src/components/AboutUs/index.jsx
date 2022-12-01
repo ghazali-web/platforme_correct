@@ -1,6 +1,6 @@
-import react from "react";
-import { Image, Button, Video } from "..";
-import anime from "../../assets/Video/Multimedia Application and Virtual Reality - Introduction -26 Definitions.mp4";
+// import react from "react";
+import { Image, Button} from "..";//, Video 
+// import anime from "../../assets/Video/Multimedia Application and Virtual Reality - Introduction -26 Definitions.mp4";
 import "./style.css";
 import React from "react";
 import logo from "../../assets/images/ForEndImage.png";

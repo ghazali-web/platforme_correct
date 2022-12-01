@@ -21,7 +21,7 @@ const Signin = () => {
       zIndex: "1",
     },
   };
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
   const navigate = useNavigate();
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
@@ -29,10 +29,10 @@ const Signin = () => {
     e.preventDefault();
     const signin = { email, password };
     try {
-      const response = await API.post("/users/signin", signin);
-      const allPosts = [...posts, response.data];
-      setPosts(allPosts);
-      navigate("http://localhost:3002");
+       await API.post("/users/signin", signin);
+      // const allPosts = [...posts, response.data];
+      // setPosts(allPosts);
+      navigate("/");
     } catch (err) {
       console.log(`Error: ${err.message}`);
     }

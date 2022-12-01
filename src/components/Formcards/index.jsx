@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style.css";
 import { creatProduct } from "../../api/posts";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
+// import axios from "axios"
 // import { Route, Switch, useHistory } from "react-router-dom";
 const Formcard = () => {
   const navigate = useNavigate();

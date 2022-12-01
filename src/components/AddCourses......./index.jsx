@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./style.css";
-import { useState } from "react";
+// import { useState } from "react";
 import { API } from "../../api/posts";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
-const index = () => {
+const AddCourses = () => {
   const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
@@ -17,7 +17,7 @@ const index = () => {
       for (let value in values) {
         formData.append(value, values[value]);
       }
-      axios.post("/form", formData);
+      API.post("/form", formData);
       navigate("/");
     },
   });
@@ -62,7 +62,7 @@ const index = () => {
           value={formik.values.date}
           onChange={formik.handleChange}
         >
-          date = new Date().toLocaleDateString(); document.write(date);
+          new Date().toLocaleDateString();
         </script>
         <label htmlFor="myfile">Select files:</label>
         <input
@@ -80,4 +80,4 @@ const index = () => {
     </div>
   );
 };
-export default index;
+export default AddCourses;

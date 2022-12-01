@@ -2,9 +2,9 @@ import React from "react";
 import "./style.css";
 import { SiWikipedia } from "react-icons/si";
 import { BsSearch } from "react-icons/bs";
-const styles = {
-  wikipedi: {},
-};
+// const styles = {
+//   wikipedi: {},
+// };
 const index = () => {
   return (
     <div className="navbarwiki">

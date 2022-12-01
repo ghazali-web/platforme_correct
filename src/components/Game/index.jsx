@@ -5,9 +5,9 @@ var myObstacles = [];
 var myScore;
 
 function startGame() {
-  myGamePiece = new component(30, 30, "red", 10, 120);
+  const myGamePiece = new component(30, 30, "red", 10, 120);
   myGamePiece.gravity = 0.05;
-  myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+   myScore = new component("30px", "Consolas", "black", 280, 40, "text");
   myGameArea.start();
 }
 
@@ -39,7 +39,7 @@ function component(width, height, color, x, y, type) {
   this.gravitySpeed = 0;
   this.update = function () {
     window.ctx = myGameArea.context;
-    if (this.type == "text") {
+    if (this.type === "text") {
       window.ctx.font = this.width + " " + this.height;
       window.ctx.fillStyle = color;
       window.ctx.fillText(this.text, this.x, this.y);
@@ -85,14 +85,14 @@ function component(width, height, color, x, y, type) {
 
 function updateGameArea() {
   var x, height, gap, minHeight, maxHeight, minGap, maxGap;
-  for (const i = 0; i < myObstacles.length; i += 1) {
+  for (let i = 0; i < myObstacles.length; i += 1) {
     if (myGamePiece.crashWith(myObstacles[i])) {
       return;
     }
   }
   myGameArea.clear();
   myGameArea.frameNo += 1;
-  if (myGameArea.frameNo == 1 || everyinterval(150)) {
+  if (myGameArea.frameNo === 1 || everyinterval(150)) {
     x = myGameArea.canvas.width;
     minHeight = 20;
     maxHeight = 200;
@@ -107,7 +107,7 @@ function updateGameArea() {
       new component(10, x - height - gap, "green", x, height + gap)
     );
   }
-  for (const i = 0; i < myObstacles.length; i += 1) {
+  for (let i = 0; i < myObstacles.length; i += 1) {
     myObstacles[i].x += -1;
     myObstacles[i].update();
   }
@@ -118,7 +118,7 @@ function updateGameArea() {
 }
 
 function everyinterval(n) {
-  if ((myGameArea.frameNo / n) % 1 == 0) {
+  if ((myGameArea.frameNo / n) % 1 === 0) {
     return true;
   }
   return false;

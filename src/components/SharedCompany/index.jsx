@@ -1,4 +1,4 @@
-import react from "react";
+// import react from "react";
 import "./style.css"
 import Image from "../Image";
 import elipse1 from "../../assets/images/company/Ellipse1.png";

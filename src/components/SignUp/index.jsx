@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react"; //useEffect,
 import "../SignIn/style.css";
 import { Button } from "../";
 import { MdEmail } from "react-icons/md";
@@ -7,7 +7,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import { AiOutlineUserAdd, AiFillTwitterCircle } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import {API} from "../../api/posts";
+import { API } from "../../api/posts";
 const Signup = () => {
   const styles = {
     button: {
@@ -24,15 +24,15 @@ const Signup = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [Name, setName] = useState("");
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const signup = { email, password, Name };
     try {
-      const response = await API.post("/users/signup", signup);
-      const allPosts = [...posts, response.data];
-      setPosts(allPosts);
+      await API.post("/users/signup", signup);
+      // const allPosts = [...posts, response.data];
+      // setPosts(allPosts);
       navigate("/");
     } catch (err) {
       console.log(`Error: ${err.message}`);

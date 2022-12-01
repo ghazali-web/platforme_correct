@@ -1,8 +1,8 @@
 import "./style.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Paper } from "@mui/material";
-import {API} from "../../api/posts";
-const index = () => {
+import { API } from "../../api/posts";
+const FormCoursesAdded = () => {
   const [getcourse, setgetcourse] = useState([]);
   useEffect(() => {
     const fetchPosts = async () => {
@@ -30,17 +30,16 @@ const index = () => {
   return (
     <section>
       <div className="bordure">
-        {getcourse.map((result, index) => {
+        {getcourse.map((result, index) => (
           <div className="displayColumn" key={index}>
-            {getcourse.map((result, i) => {
-              <Paper key={i}>{result}</Paper>;
-            })}
-            result
-          </div>;
-        })}
+            {/* {getcourse.map((result, i) => {
+            })} */}
+            <Paper key={index}>{result}</Paper>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
-export default index;
+export default FormCoursesAdded;

@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import React from "react";
-import { SignIn, Signup, Home, Navbar, Game, Quiz } from "../components";
-import { Courses, Instructor } from "../sections";
+import { SignIn, Signup, Home,  Game, Quiz } from "../components";//Navbar,
+// import { Courses, Instructor } from "../sections";
 
 const ConfigRouter = () => {
   

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Card } from "../components";
-import {API}from "../api/posts"
-import teacher1 from "../assets/images/Teacher/teacher1.png";
-import teacher2 from "../assets/images/Teacher/teacher2.png";
-import teacher3 from "../assets/images/Teacher/teacher3.png";
-import teacher4 from "../assets/images/Teacher/teacher4.png";
+import { API } from "../api/posts";
+// import teacher1 from "../assets/images/Teacher/teacher1.png";
+// import teacher2 from "../assets/images/Teacher/teacher2.png";
+// import teacher3 from "../assets/images/Teacher/teacher3.png";
+// import teacher4 from "../assets/images/Teacher/teacher4.png";
 import { AiFillStar } from "react-icons/ai";
 import { HiUserGroup } from "react-icons/hi";
 import { GiBookmarklet } from "react-icons/gi";
@@ -69,7 +69,7 @@ const Instructor = () => {
 
   return (
     <section id="Instructor">
-      {getCard.map((result, index) => {
+      {getCard.map((result, index) => (
         <div key={index}>
           <Card
             img={result.img}
@@ -84,8 +84,8 @@ const Instructor = () => {
             spantext3={result.spantext3}
             text2={"See More"}
           />
-        </div>;
-      })}
+        </div>
+      ))}
     </section>
   );
 };

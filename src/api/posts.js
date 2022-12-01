@@ -19,13 +19,12 @@ export const creatProductSecond = (newProduct) =>
     data: newProduct,
   });
 
-
-  export const fetchProductSecond = (newProduct) =>
-    API({
-      method: "GET",
-      url: "/secondCardsRouter",
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-      data: newProduct,
-    });
+export const fetchProductSecond = (newProduct) =>
+  API({
+    method: "GET",
+    url: "/secondCardsRouter",
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+    data: newProduct,
+  });
