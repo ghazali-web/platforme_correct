@@ -1,6 +1,6 @@
 import axios from "axios";
 export const API = axios.create({ baseURL: "http://localhost:3002" });
-export const creatProduct = (newProduct) =>
+export const creatProduct = (newProduct) => {
   API({
     method: "POST",
     url: "/card",
@@ -9,6 +9,7 @@ export const creatProduct = (newProduct) =>
     },
     data: newProduct,
   });
+};
 export const creatProductSecond = (newProduct) =>
   API({
     method: "POST",

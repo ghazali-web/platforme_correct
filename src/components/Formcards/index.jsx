@@ -57,7 +57,10 @@ const Formcard = () => {
 
   return (
     <div className="formcards">
-      <form method="post" encType="multipart/form-data">
+      <form
+        
+        onSubmit={formik.handleSubmit}
+      >
         {/* <input
           type="text"
           name="Instructor"
@@ -119,12 +122,7 @@ const Formcard = () => {
           value={formik.values.spantext3}
           onChange={formik.handleChange}
         />
-        <button
-          onSubmit={formik.handleSubmit}
-          type="submit"
-          variant="contained"
-          color="secondary"
-        >
+        <button type="submit" variant="contained" color="secondary">
           Add Teacher
         </button>
       </form>
