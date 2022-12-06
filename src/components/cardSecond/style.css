@@ -13,7 +13,7 @@
 }
 
 .title-text-aboutus {
-  color: FE7558;
+  color: #FE7558;
   font-size: 18;
   font-family: Roboto;
 }
@@ -23,7 +23,7 @@
   font-size: 70;
   font-size: xx-large;
 }
-.body {
+.bodyCard {
   background-color: #344955;
   width: 350px;
   height: 850px;

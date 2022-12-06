@@ -1,5 +1,5 @@
 // import react from "react";
-import { Image, Button} from "..";//, Video 
+import { Image, Button } from ".."; //, Video
 // import anime from "../../assets/Video/Multimedia Application and Virtual Reality - Introduction -26 Definitions.mp4";
 import "./style.css";
 import React from "react";

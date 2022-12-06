@@ -24,3 +24,4 @@ export { default as Hellovietnam } from "./HelloVitenam";
 export { default as FormCard } from "./Formcards";
 export { default as FormCardSecond } from "./FormCardSecond";
 export { API } from "../api/posts";
+export {default as FormeCourseAdded} from "./FormCoursesAdded....."

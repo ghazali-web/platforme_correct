@@ -10,7 +10,7 @@ const CardSecond = (props) => {
         <p className="title-text-aboutus">{"Instructor"}</p>
         <p className="title-text-pouplar">{"pouplar"}</p>
       </div>
-      <div className="body">
+      <div className="bodyCard">
         <img className="card-image" alt='cardimage' src={props.img} />
         <div className="card-stats">
           <h1>{props.Module}</h1>

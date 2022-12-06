@@ -1,6 +1,6 @@
-import React from "react";//, { useState }
+import React from "react"; //, { useState }
 import "./style.css";
-import {creatProductSecond} from "../../api/posts";
+import { creatProductSecond } from "../../api/posts";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 const FormCardSecond = () => {
@@ -8,11 +8,11 @@ const FormCardSecond = () => {
   const formik = useFormik({
     initialValues: {
       imagesSecondCard: "",
-      spantext1: "",
-      spantext2: "",
-      spantext3: "",
-      spantext4: "",
-      spantext5: "",
+      nbrStar: "",
+      nbrStudent: "",
+      nbrHour: "",
+      Lecture: "",
+      Medium: "",
       imagesCardSupervisor: "",
       NameSupervisor: "",
       Dollar: "",
@@ -23,52 +23,19 @@ const FormCardSecond = () => {
       for (let value in values) {
         formData.append(value, values[value]);
       }
-      creatProductSecond.post("/secondCardsRouter", formData);
+      creatProductSecond(formData);
       navigate("/");
     },
   });
-  // const [imagesSecondCard, setimagesSecondCard] = useState("");
-  // const [spantext1, setspantext1] = useState("");
-  // const [spantext2, setspantext2] = useState("");
-  // const [spantext3, setspantext3] = useState("");
-  // const [spantext4, setspantext4] = useState("");
-  // const [spantext5, setspantext5] = useState("");
-  // const [imagesCardSupervisor, setimagesCardSupervisor] = useState("");
-  // const [NameSupervisor, setNameSupervisor] = useState("");
-  // const [Dollar, setDollar] = useState("");
-  // const [posts, setPosts] = useState([]);
-  // const navigate = useNavigate();
-  // const handleclick = async (e) => {
-  //   e.preventDefault();
-  //   const course = {
-  //     imagesSecondCard,
-  //     spantext1,
-  //     spantext2,
-  //     spantext3,
-  //     spantext4,
-  //     spantext5,
-  //     imagesCardSupervisor,
-  //     NameSupervisor,
-  //     Dollar,
-  //   };
-  //   try {
-  //     const response = await api.post("/secondCardsRouter", course);
-  //     const allPosts = [...posts, response.data];
-  //     setPosts(allPosts);
-  //     navigate("/");
-  //   } catch (err) {
-  //     console.log(`Error: ${err.message}`);
-  //   }
-  // };
 
   return (
     <div className="FormCardSeconds">
-      <form method="post" encType="multipart/form-data">
-        <label htmlFor="myfile">Select images:</label>
+      <form onSubmit={formik.handleSubmit}>
+        {/* <label htmlFor="imagesSecondCard">Select images:</label> */}
         <input
           type="file"
           multiple={false}
-          id="myfile"
+          id="imagesSecondCard"
           accept="image/*"
           name="imagesSecondCard"
           onChange={(e) =>
@@ -78,51 +45,51 @@ const FormCardSecond = () => {
 
         <input
           type="text"
-          id="spantext1"
+          id="nbrStar"
           placeholder="NbrStar"
-          name="spantext1"
-          value={formik.values.spantext1}
+          name="nbrStar"
+          value={formik.values.nbrStar}
           onChange={formik.handleChange}
         />
 
         <input
           type="text"
-          id="spantext2"
+          id="nbrStudent"
           placeholder="NbrStudent"
-          name="spantext2"
-          value={formik.values.spantext2}
+          name="nbrStudent"
+          value={formik.values.nbrStudent}
           onChange={formik.handleChange}
         />
         <input
           type="text"
-          id="spantext3"
+          id="nbrHour"
           placeholder="NbrHour"
-          name="spantext3"
-          value={formik.values.spantext3}
+          name="nbrHour"
+          value={formik.values.nbrHour}
           onChange={formik.handleChange}
         />
         <input
           type="text"
-          id="spantext4"
+          id="Lecture"
           placeholder="Lecture"
-          name="spantext4"
-          value={formik.values.spantext4}
+          name="Lecture"
+          value={formik.values.Lecture}
           onChange={formik.handleChange}
         />
         <input
           type="text"
-          id="spantext5"
+          id="Medium"
           placeholder="Medium"
-          name="spantext5"
-          value={formik.values.spantext5}
+          name="Medium"
+          value={formik.values.Medium}
           onChange={formik.handleChange}
         />
         <input
           type="file"
-          id="myfilesecond"
+          id="imagesCardSupervisor"
           accept="image/*"
           multiple={false}
-          name="myfilesecond"
+          name="imagesCardSupervisor"
           onChange={(e) =>
             formik.setFieldValue(
               "imagesCardSupervisor",
@@ -146,7 +113,7 @@ const FormCardSecond = () => {
           value={formik.values.Dollar}
           onChange={formik.handleChange}
         />
-        <button variant="contained" color="secondary">
+        <button type="submit" variant="contained" color="secondary">
           Add Course
         </button>
       </form>

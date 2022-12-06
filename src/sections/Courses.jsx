@@ -45,14 +45,13 @@ const Courses = () => {
         <div key={index}>
           <CardSecond
             img={result.Files}
-            Module={result.Module}
-            spantext1={result.spantext1}
-            spantext2={result.spantext2}
-            spantext3={result.spantext3}
-            spantext4={result.spantext4}
-            spantext5={result.spantext5}
-            img2={result.Files2}
-            nameSupervisor={result.NameSupervisor}
+            spantext1={result.nbrStar}
+            spantext2={result.nbrStudent}
+            spantext3={result.nbrHour}
+            spantext4={result.Lecture}
+            spantext5={result.Medium}
+            img2={result.Files}
+            nameSupervisor={result.nameSupervisor}
             Dollar={result.Dollar}
           />
         </div>

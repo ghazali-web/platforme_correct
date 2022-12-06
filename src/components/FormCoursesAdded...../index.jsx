@@ -30,10 +30,21 @@ const FormCoursesAdded = () => {
   return (
     <section>
       <div className="bordure">
+        <iframe
+          title="Machine Learning"
+          src="https://docs.google.com/presentation/d/e/2PACX-1vQWZkaw8swFkxtnxXTVsSvPSgMjkNmH0e8DReS6RAPmLCwmgJ55FBLm3hzAqdpH2FCWu_bW34tS0Ufv/embed?start=false&loop=false&delayms=3000"
+          frameborder="0"
+          width="960"
+          height="569"
+          allowfullscreen="true"
+          mozallowfullscreen="true"
+          webkitallowfullscreen="true"
+        ></iframe>
         {getcourse.map((result, index) => (
           <div className="displayColumn" key={index}>
             {/* {getcourse.map((result, i) => {
             })} */}
+
             <Paper key={index}>{result}</Paper>
           </div>
         ))}

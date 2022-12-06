@@ -1,6 +1,63 @@
-@import url("../cardSecond/style.css");
+.card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title-text-aboutus {
+  color: #fe7558;
+  font-size: 18px;
+  font-family: Roboto;
+  width: 85px;
+  height: 21px;
+  font-size: small;
+}
+.bodyCard {
+  background-color: #344955;
+
+  border-radius: 20px;
+  height: fit-content;
+}
+
 .module {
   width: fit-content;
   height: fit-content;
   color: #8a8a8a;
+}
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card-image {
+  border-radius: 50%;
+}
+
+.card-stats {
+  font-family: Roboto;
+  font-size: 70px;
+  color: #000000;
+}
+
+.SeeMore {
+  width: fit-content;
+
+  background: #fe7558;
+  border-radius: 30px;
+}
+Button {
+  width: fit-content;
+  background: #fe7558;
+  border-radius: 30px;
 }

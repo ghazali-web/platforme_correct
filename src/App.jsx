@@ -8,5 +8,6 @@ function App() {
       <ConfigRouter />
     </div>
   );
+  
 }
 export default App;

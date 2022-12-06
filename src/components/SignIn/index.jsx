@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {API} from "../../api/posts";
+import {API, SignIn} from "../../api/posts";
 import "./style.css";
 import { Button } from "../";
 import { MdEmail } from "react-icons/md";
@@ -29,7 +29,7 @@ const Signin = () => {
     e.preventDefault();
     const signin = { email, password };
     try {
-       await API.post("/users/signin", signin);
+       const dataa=await SignIn(signin);
       // const allPosts = [...posts, response.data];
       // setPosts(allPosts);
       navigate("/");

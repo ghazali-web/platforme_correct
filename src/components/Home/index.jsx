@@ -1,8 +1,15 @@
 import React from "react";
 import "./style.css";
-import { Chart, FormCardSecond, FormCard, Navbar, Sidebar } from "../";// Quiz,
+import { Chart, FormCardSecond, FormCard, Navbar, Sidebar } from "../"; // Quiz,
 import { Aboutus, Courses, HeroBanner, Instructor } from "../../sections";
-const index = () => {
+import { useNavigate } from "react-router-dom";
+const Index = () => {
+  const navigate = useNavigate();
+  const Logout = () => {
+    localStorage.clear();
+
+    navigate("signin");
+  };
   return (
     <div>
       <header className="App-header">
@@ -13,12 +20,13 @@ const index = () => {
         <Aboutus />
         <FormCard />
         <Instructor />
-        <Courses />
+        {/* <Courses /> */}
         <FormCardSecond />
-        <Sidebar />
-        <Chart />
+        {/* <Sidebar /> */}
+        {/* <Chart /> */}
+        <button onClick={Logout}> log out </button>
       </main>
     </div>
   );
 };
-export default index;
+export default Index;

@@ -27,47 +27,11 @@ const Formcard = () => {
     },
   });
 
-  // const [imagesCard, setimagesCard] = useState("");
-  // const [NameTeacher, setNameTeacher] = useState("");
-  // const [Module, setModule] = useState("");
-  // const [spantext1, setspantext1] = useState("");
-  // const [spantext2, setspantext2] = useState("");
-  // const [spantext3, setspantext3] = useState("");
-  // const [posts, setPosts] = useState([]);
-
-  // const handleclick = async (e) => {
-  //   e.preventDefault();
-  //   const course = {
-  //     imagesCard,
-  //     NameTeacher,
-  //     Module,
-  //     spantext1,
-  //     spantext2,
-  //     spantext3,
-  //   };
-  //   try {
-  //     const response = await creatProduct(course);
-  //     const allPosts = [...posts, response.data];
-  //     setPosts(allPosts);
-  //     navigate("/");
-  //   } catch (err) {
-  //     console.log(`Error: ${err.message}`);
-  //   }
-  // };
 
   return (
     <div className="formcards">
-      <form
-        
-        onSubmit={formik.handleSubmit}
-      >
-        {/* <input
-          type="text"
-          name="Instructor"
-          id="Instructor"
-          placeholder="Instructor"
-          onChange={(e) => setInstructor(e.target.value)}
-        /> */}
+      <form   onSubmit={formik.handleSubmit}     >
+       
         <label htmlFor="myfilecard">Select images:</label>
         <input
           type="file"
