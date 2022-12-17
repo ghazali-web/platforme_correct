@@ -1,6 +1,4 @@
 import "./style.css";
-import "../navbar/style.css";
-import "../SearchBar/style.css";
 import React from "react";
 import { Hellovietnam, Navwiki } from "..";
 const index = () => {

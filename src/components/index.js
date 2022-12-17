@@ -24,4 +24,8 @@ export { default as Hellovietnam } from "./HelloVitenam";
 export { default as FormCard } from "./Formcards";
 export { default as FormCardSecond } from "./FormCardSecond";
 export { API } from "../api/posts";
-export {default as FormeCourseAdded} from "./FormCoursesAdded....."
+export { default as FormeCourseAdded } from "./FormCoursesAdded.....";
+export { default as Charts } from "./ChartStatistics";
+export { default as CardAddCourse } from "./cardAddCourse";
+export {default as AddCourses}from "./AddCourses"
+export {default as Pageofcourse} from "./pageofcourse"

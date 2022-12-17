@@ -2,6 +2,10 @@
   border-style: solid;
   color: black;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .displayColumn {
   display: flex;
@@ -9,4 +13,20 @@
   justify-content: space-between;
   align-items: center;
   margin: 20px;
+}
+.wiki {
+  height: 100%;
+  width: 20%;
+}
+.wiki:hover {
+  width: 100%;
+}
+
+.iframe-link iframe {
+  display: none;
+}
+.iframe-link:hover iframe {
+  margin-left: 900px;
+  transform: scale(0.8);
+  display: block;
 }

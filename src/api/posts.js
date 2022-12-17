@@ -36,9 +36,19 @@ export const SignIn = async (userData) => {
     console.log(error);
   }
 };
+export const Signup = async (userData) => {
+  try {
+    const { data } = await API.post("/users/signup", userData);
+    localStorage.setItem("profile", JSON.stringify(data));
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const fetchproducts = () =>
   API.get("/card").then((res) => {
-    console.log(res)
+    console.log(res);
     return res.data;
   });
 
@@ -56,6 +66,24 @@ export const fetchProductSecond = (newProduct) =>
   API({
     method: "GET",
     url: "/secondCardsRouter",
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+    data: newProduct,
+  });
+export const fetchformaddcourse = (newProduct) =>
+  API({
+    method: "GET",
+    url: "/form",
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+    data: newProduct,
+  });
+export const formaddcourse = (newProduct) =>
+  API({
+    method: "POST",
+    url: "/form",
     headers: {
       "Content-Type": "multipart/form-data",
     },

@@ -1,0 +1,45 @@
+.headerSign {
+  display: flex;
+  margin-left: -50%;
+  width: 400%;
+  height: 600px;
+}
+.signBody {
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #283288;
+  height: 100%;
+  width: 50%;
+}
+input {
+  height: 40px;
+  border-radius: 50px;
+}
+.sign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+.socialMedia {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+Button {
+  margin-top: 10%;
+}

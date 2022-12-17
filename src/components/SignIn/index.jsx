@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {API, SignIn} from "../../api/posts";
+import { SignIn } from "../../api/posts";
 import "./style.css";
 import { Button } from "../";
 import { MdEmail } from "react-icons/md";
@@ -16,7 +16,8 @@ const Signin = () => {
       justifyContent: "center",
       alignItems: "center",
       borderRadius: "30px",
-      backgroundColor: "#283288",
+      backgroundColor: "#e6300b",
+      width: "50%",
       color: "black",
       zIndex: "1",
     },
@@ -29,7 +30,7 @@ const Signin = () => {
     e.preventDefault();
     const signin = { email, password };
     try {
-       const dataa=await SignIn(signin);
+      const dataa = await SignIn(signin);
       // const allPosts = [...posts, response.data];
       // setPosts(allPosts);
       navigate("/");
@@ -39,7 +40,7 @@ const Signin = () => {
   };
 
   return (
-    <div>
+    <div className="headerpost">
       <form
         className="headerSign"
         method="post"
@@ -48,17 +49,19 @@ const Signin = () => {
       >
         <div className="signBody">
           <h1 className="sign">Sign In</h1>
-          <div className="flexrow">
-            <MdEmail />
-            <input
-              type="email"
-              value={email}
-              name="email"
-              id="email"
-              placeholder="Email"
-              styles={{ fontSize: "24px", color: "black" }}
-              onChange={(e) => setemail(e.target.value)}
-            />
+          <div className="flexcolumn">
+            <div className="flexrow">
+              <MdEmail />
+              <input
+                type="email"
+                value={email}
+                name="email"
+                id="email"
+                placeholder="Email"
+                styles={{ fontSize: "24px", color: "black" }}
+                onChange={(e) => setemail(e.target.value)}
+              />
+            </div>
             {/* <script value={email} onChange={(e) => setemail(e.target.value)}>
               email=req.body.email;
             </script> */}

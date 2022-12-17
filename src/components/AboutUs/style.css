@@ -1,9 +1,9 @@
 .About-us {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-top: 100px;
 }
 .video {
@@ -13,8 +13,13 @@
 .wlecome {
   display: flex;
   flex-direction: column;
-  width: 425px;
+  width: 50%;
+  margin-left: 15%;
   /* height: 341px; */
+}
+.imageLogo{
+  width: 50%;
+  margin-left: 5%;
 }
 .title-text-aboutus {
   color: #fe7558;
@@ -42,4 +47,47 @@
 .LearnMore text {
   color: #ffffff;
   font-size: medium;
+}
+.bodyCard {
+  background-color: #344955;
+  width: 350px;
+  height: 850px;
+  border-radius: 20px;
+  height: 50%;
+}
+.card-image {
+  width: 304.81px;
+  height: 326px;
+}
+.card-stats h1 {
+  font-family: Roboto;
+  font-size: 70px;
+  color: #000000;
+}
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 15px;
+}
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 15px;
+}
+.flexrow img {
+  width: 45px;
+  height: 45px;
+}
+.flexrow span {
+  color: #000000;
+  font-family: Roboto;
+  font-size: 18px;
+}
+.bordure {
+  border-inline: 1px solid #bebebe;
+  width: 100%;
 }

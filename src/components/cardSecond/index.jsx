@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.css";
-import "../AboutUs/style.css";
-import { styles } from "../AboutUs";
+const styles = { img: { borderRadius: "50%" }, Dollar: { color: "green" } };
 const CardSecond = (props) => {
   const { Icon1, Icon2, Icon3, Icon4, Icon5 } = props;
   return (
@@ -11,9 +10,9 @@ const CardSecond = (props) => {
         <p className="title-text-pouplar">{"pouplar"}</p>
       </div>
       <div className="bodyCard">
-        <img className="card-image" alt='cardimage' src={props.img} />
+        <img className="card-image" alt="cardimage" src={props.img} />
         <div className="card-stats">
-          <h1>{props.Module}</h1>
+          {/* <h1>{props.Module}</h1> */}
           {/* -----1---------- */}
           <div className="flexrow">
             <div>
@@ -46,7 +45,7 @@ const CardSecond = (props) => {
         <div className="bordure"></div>
 
         <div className="flexrow">
-          <img alt='img2' src={props.img2} styles={styles.img} />
+          <img alt="img2" src={props.img2} styles={styles.img} />
           <p>{props.nameSupervisor}</p>
           <p style={styles.Dollar}>{props.Dollar}</p>
         </div>

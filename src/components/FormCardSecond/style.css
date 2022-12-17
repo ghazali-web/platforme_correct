@@ -10,5 +10,5 @@
 .FormCardSeconds:hover input {
   display: flex;
   margin: 20px;
-  width: fit-content;
+  width: 50%;
 }

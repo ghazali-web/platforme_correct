@@ -1,6 +1,5 @@
 .card {
   width: 100px;
-  
 }
 .header {
   display: flex;
@@ -9,18 +8,19 @@
   /* flex-wrap: wrap; */
   justify-content: center;
   margin: 40px;
-  
 }
-
 .title-text-aboutus {
-  color: #FE7558;
-  font-size: 18;
+  color: #fe7558;
+  width: 85px;
+  height: 21px;
+  font-size: small;
   font-family: Roboto;
 }
+
 .title-text-pouplar {
   font-family: Roboto;
   color: #000000;
-  font-size: 70;
+  font-size: 70px;
   font-size: xx-large;
 }
 .bodyCard {
@@ -28,7 +28,7 @@
   width: 350px;
   height: 850px;
   border-radius: 20px;
-  height: fit-content;
+  height: 50%;
 }
 .card-image {
   width: 304.81px;
@@ -36,13 +36,10 @@
 }
 .card-stats h1 {
   font-family: Roboto;
-  font-size: 70;
+  font-size: 70px;
   color: #000000;
 }
-.bordure {
-  border-inline: 1px solid #000000;
-  width: 100%;
-}
+
 
 .flexrow img {
   width: 45px;
@@ -51,16 +48,17 @@
 .flexrow span {
   color: #000000;
   font-family: Roboto;
-  font-size: 18;
+  font-size: 18px;
 }
 .bordure {
   border-inline: 1px solid #bebebe;
   width: 100%;
 }
+
 .Dollar {
   color: #0a908a;
   font-family: Roboto;
-  font-size: 18;
+  font-size: 18px;
 }
 .flexrow {
   display: flex;

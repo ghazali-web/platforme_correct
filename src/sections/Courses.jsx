@@ -14,22 +14,23 @@ import { CardSecond } from "../components";
 import { API } from "../api/posts";
 const Courses = () => {
   const [getCardSecond, setgetCardSecond] = useState([]);
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await API.get("/secondCardsRouter");
-        setgetCardSecond(response.data);
-      } catch (err) {
-        if (err.response) {
-          // Not in the 200 response range
-          console.log(err.response.data);
-          console.log(err.response.status);
-          console.log(err.response.headers);
-        } else {
-          console.log(`Error: ${err.message}`);
-        }
+
+  const fetchPosts = async () => {
+    try {
+      const response = await API.get("/secondCardsRouter");
+      setgetCardSecond(response.data);
+    } catch (err) {
+      if (err.response) {
+        // Not in the 200 response range
+        console.log(err.response.data);
+        console.log(err.response.status);
+        console.log(err.response.headers);
+      } else {
+        console.log(`Error: ${err.message}`);
       }
-    };
+    }
+  };
+  useEffect(() => {
     fetchPosts();
   }, []);
 
@@ -40,23 +41,33 @@ const Courses = () => {
   //     .then((result) => setgetCardSecond(result));
   // }, []);
   return (
-    <section id="Courses">
-      {getCardSecond.map((result, index) => (
-        <div key={index}>
-          <CardSecond
-            img={result.Files}
-            spantext1={result.nbrStar}
-            spantext2={result.nbrStudent}
-            spantext3={result.nbrHour}
-            spantext4={result.Lecture}
-            spantext5={result.Medium}
-            img2={result.Files}
-            nameSupervisor={result.nameSupervisor}
-            Dollar={result.Dollar}
-          />
-        </div>
-      ))}
-    </section>
+    <div
+      id="Courses"
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "spaceBetween",
+        width: "100%",
+        height: "100%",
+      }}
+    >
+      {getCardSecond &&
+        getCardSecond.map((result, index) => (
+          <div key={index}>
+            <CardSecond
+              img={result.imagesSecondCard}
+              spantext1={result.nbrStar}
+              spantext2={result.nbrStudent}
+              spantext3={result.nbrHour}
+              spantext4={result.Lecture}
+              spantext5={result.Medium}
+              img2={result.imagesCardSupervisor}
+              nameSupervisor={result.nameSupervisor}
+              Dollar={result.Dollar}
+            />
+          </div>
+        ))}
+    </div>
   );
 };
 

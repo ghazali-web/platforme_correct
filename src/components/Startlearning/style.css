@@ -1,23 +1,24 @@
-@import url("../animation/style.css");
+.startlearning {
+  display: flex;
+  margin-top: 4%;
+  margin-bottom: 200px;
+  margin-left: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  height: 50%;
+  animation: movedown 1s ease-in-out 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
 .headier {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.startlearning {
-  display: felx;
-  margin-bottom: 200px;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  width: 450px;
-  height: 406px;
-  animation: movedown 1s ease-in-out 1s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
+  margin-top: 5%;
 }
 h1 {
   color: #2f374b;

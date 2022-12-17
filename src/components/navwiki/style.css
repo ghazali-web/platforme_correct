@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-basis: 1;
+  
   /* position: absolute; */
 }
 
@@ -22,3 +22,20 @@
   font-weight: bold;
   color: #26c32d;
 }
+.search-wrap {
+  display: flex;
+  border: 1px solid #008ea1;
+  border-radius: 30px;
+  height: 50%;
+  align-items: center;
+  overflow-x: hidden;
+  width: 300px;
+}
+.search-wrap input {
+  border: none;
+  height: 1.5rem;
+  padding: 0.5rem;
+  outline: none;
+  width: 300px;
+}
+

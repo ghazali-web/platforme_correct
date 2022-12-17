@@ -3,6 +3,7 @@
   animation: movedown 1s ease-in-out 1s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
+  left: 0;
   width: 100%;
   visibility: visible;
   height: 80px;

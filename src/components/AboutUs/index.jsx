@@ -31,7 +31,7 @@ export const styles = {
 const index = () => {
   return (
     <div className="About-us">
-      <div>
+      <div className="imageLogo">
         <Image image={logo} />
 
         {/* <Video className="video" src={anime} loop autoplay muted /> */}

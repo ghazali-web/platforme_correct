@@ -1,9 +1,10 @@
+.headerpost {
+  margin-left: -20%;
+  width: 500px;
+  height: 600px;
+}
 .headerSign {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  background-color: #283288;
 }
 .signBody {
   border-radius: 50px;
@@ -11,9 +12,11 @@
   flex-direction: column;
   align-items: center;
   background-color: #283288;
-  /* background-color: #ffffff; */
-  height: fit-content;
-  width: 900px;
+}
+input {
+  height: 40px;
+  width: 500px;
+  border-radius: 50px;
 }
 .sign {
   display: flex;
@@ -32,13 +35,12 @@
   justify-content: space-between;
   align-items: center;
 }
-span {
-  color: #283288;
-  font-weight: 624;
-  font-size: 14;
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-p {
-  color: #000000;
-  font-weight: 624;
-  font-size: 14;
+Button {
+  margin-top: 10%;
 }

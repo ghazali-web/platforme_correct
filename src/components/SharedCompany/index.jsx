@@ -1,5 +1,6 @@
 // import react from "react";
-import "./style.css"
+import "./style.css";
+import "../animation/style.css";
 import Image from "../Image";
 import elipse1 from "../../assets/images/company/Ellipse1.png";
 import elipse2 from "../../assets/images/company/Ellipse2.png";

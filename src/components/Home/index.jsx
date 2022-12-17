@@ -2,14 +2,8 @@ import React from "react";
 import "./style.css";
 import { Chart, FormCardSecond, FormCard, Navbar, Sidebar } from "../"; // Quiz,
 import { Aboutus, Courses, HeroBanner, Instructor } from "../../sections";
-import { useNavigate } from "react-router-dom";
-const Index = () => {
-  const navigate = useNavigate();
-  const Logout = () => {
-    localStorage.clear();
 
-    navigate("signin");
-  };
+const Index = () => {
   return (
     <div>
       <header className="App-header">
@@ -24,7 +18,6 @@ const Index = () => {
         <FormCardSecond />
         {/* <Sidebar /> */}
         {/* <Chart /> */}
-        <button onClick={Logout}> log out </button>
       </main>
     </div>
   );

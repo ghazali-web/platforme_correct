@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Card } from "../components";
-import { API, fetchproducts } from "../api/posts";
+import { fetchproducts } from "../api/posts";
 // import teacher1 from "../assets/images/Teacher/teacher1.png";
 // import teacher2 from "../assets/images/Teacher/teacher2.png";
 // import teacher3 from "../assets/images/Teacher/teacher3.png";
@@ -8,16 +8,7 @@ import { API, fetchproducts } from "../api/posts";
 import { AiFillStar } from "react-icons/ai";
 import { HiUserGroup } from "react-icons/hi";
 import { GiBookmarklet } from "react-icons/gi";
-import { useNavigate } from "react-router-dom";
-// --------------------------------------
-// const styles = {
-//   postedcard: {
-//     display: "flex",
-//     flexDirection: "row",
-//     justifyContent: "space-between",
-//     margin: "15px",
-//   },
-// };
+
 const Instructor = () => {
   const [getCard, setgetCard] = useState([]);
   const getdata = async () => {
@@ -25,7 +16,6 @@ const Instructor = () => {
       const response = await fetchproducts();
       console.log(response);
       setgetCard(response);
-      
     } catch (err) {
       if (err.response) {
         // Not in the 200 response range
@@ -41,17 +31,18 @@ const Instructor = () => {
     getdata();
   }, []);
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "spaceBetween",
+        width: "100%",
+        height: "100%",
+      }}
+    >
       {getCard &&
         getCard.map((result, index) => (
-          <div
-            key={index}
-            style={{
-              display: "row",
-              justifyContent: "spaceBetween",
-              marginLeft: "200px",
-            }}
-          >
+          <div key={index}>
             <Card
               img={result.imagesCard}
               NameTeacher={result.NameTeacher}

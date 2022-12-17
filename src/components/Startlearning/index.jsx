@@ -1,7 +1,22 @@
 import React from "react";
 import "./style.css";
 import Button from "../Button";
-import { styles } from "../AboutUs";
+import "../animation/style.css";
+const styles = {
+  p: { fontFamily: "Roboto", fontSize: "12px", color: "#ffffff" },
+  button: {
+    width: "fit-content",
+    height: "40px",
+    background: "#fe7558",
+    borderRadius: "30px",
+  },
+  Discover: {
+    width: "fit-content",
+    height: "40px",
+    background: "#fff",
+    borderRadius: "30px",
+  },
+};
 const index = () => {
   return (
     <div className="startlearning">

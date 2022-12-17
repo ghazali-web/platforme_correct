@@ -2,6 +2,7 @@ import "./style.css";
 import { Image, SearchBar, ComponentBar } from "..";
 import logo from "../../assets/images/uni-anu.png";
 import { GrUserExpert } from "react-icons/gr";
+import "../animation/style.css";
 const navbar = () => {
   return (
     <div className="container">
