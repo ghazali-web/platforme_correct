@@ -19,7 +19,7 @@ export default function Chart(props) {
   const theme = useTheme();
   const data = [
     createData("00:00", props.scores),
-    createData("24:00", undefined),
+    createData("24:00", props.scores),
   ];
   return (
     <React.Fragment>

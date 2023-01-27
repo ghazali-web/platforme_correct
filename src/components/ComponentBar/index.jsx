@@ -6,7 +6,7 @@ const index = () => {
       <div className="side-bar-menu">
         <ul>
           <li>
-            <a href="#HeroBanner" className="active">
+            <a href="/" className="active">
               <i className="fa fa-home" />
               <span>Home</span>
             </a>

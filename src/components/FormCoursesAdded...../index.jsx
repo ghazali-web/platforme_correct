@@ -1,70 +1,40 @@
 import "./style.css";
-import React, { useState, useEffect } from "react";
-import { Paper } from "@mui/material";
-import { API } from "../../api/posts";
+import React from "react";
+import { Navbar } from "..";
 
 const FormCoursesAdded = () => {
-  const [getcourse, setgetcourse] = useState([]);
-
-  const fetchPosts = async () => {
-    try {
-      const response = await API.get("/form");
-      setgetcourse(response.data);
-    } catch (err) {
-      if (err.response) {
-        // Not in the 200 response range
-        console.log(err.response.data);
-        console.log(err.response.status);
-        console.log(err.response.headers);
-      } else {
-        console.log(`Error: ${err.message}`);
-      }
-    }
-  };
-  useEffect(() => {
-    fetchPosts();
-  }, []);
-
-  // useEffect(() => {
-  //   fetch("localhost:3002/formCourses/")
-  //     .then((res) => res.json())
-  //     .then((result) => setgetcourse(result));
-  // }, []);
   return (
     <section>
-      <div className="bordure">
-        <a class="iframe-link" href="https://www.wikipedia.org/">
-          WIki
-          <div>
-          <iframe
-          
-            title="Machine Learning"
-            src="https://www.wikipedia.org/"
-            frameborder="0"
-            width="2500"
-            height="1500"
-          ></iframe></div>
-        </a>
-        <div classname="slide">
-          <iframe
-            title="Machine Learning"
-            src="https://docs.google.com/presentation/d/e/2PACX-1vQWZkaw8swFkxtnxXTVsSvPSgMjkNmH0e8DReS6RAPmLCwmgJ55FBLm3hzAqdpH2FCWu_bW34tS0Ufv/embed?start=false&loop=false&delayms=3000"
-            frameborder="0"
-            width="960"
-            height="569"
-            allowfullscreen="true"
-            mozallowfullscreen="true"
-            webkitallowfullscreen="true"
-          ></iframe>
+      <header className="App-header">
+        <Navbar />
+      </header>
+      <div className="bordures">
+        <div className="Nbody">
+          <h1>
+            <h2>Description:</h2>
+            <span>
+              In Programming with Mosh’s Python Machine Learning Tutorial, he
+              shows you how to learn how to predict the kind of music people
+              like. The video outlines various machine learning libraries and
+              tools, Jupyter shortcuts, data preparation, persisting models, and
+              visualizing a decision tree as well.
+            </span>
+            <a href="/video">Click here to watch for learning</a>
+          </h1>
         </div>
-        {getcourse.map((result, index) => (
-          <div className="displayColumn" key={index}>
-            {/* {getcourse.map((result, i) => {
-            })} */}
-
-            <Paper key={index}>{result}</Paper>
-          </div>
-        ))}
+        <div className="Nbody">
+          <h2>Description:</h2>
+          <span>
+            In Programming with Mosh’s Python Machine Learning Tutorial, he
+            shows you how to learn how to predict the kind of music people like.
+            The video outlines various machine learning libraries and tools,
+            Jupyter shortcuts, data preparation, persisting models, and
+            visualizing a decision tree as well.
+          </span>
+          <h1>
+            <a href="/docs">view course</a>
+          </h1>
+        </div>
       </div>
     </section>
   );

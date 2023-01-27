@@ -9,7 +9,7 @@ export { default as ElearningImages } from "./ElearningImage";
 export { default as StartLearning } from "./Startlearning";
 export { default as SharedCompany } from "./SharedCompany";
 export { default as AboutUs } from "./AboutUs";
-export { default as Video } from "./Video/Video";
+export { default as Video } from "./Video";
 export { default as CardSecond } from "./cardSecond";
 export { default as SignIn } from "./SignIn";
 export { default as Signup } from "./SignUp";
@@ -29,3 +29,4 @@ export { default as Charts } from "./ChartStatistics";
 export { default as CardAddCourse } from "./cardAddCourse";
 export {default as AddCourses}from "./AddCourses"
 export {default as Pageofcourse} from "./pageofcourse"
+export {default as Doc}from "./doc"

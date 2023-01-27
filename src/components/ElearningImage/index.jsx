@@ -11,14 +11,6 @@ import { ImExit } from "react-icons/im";
 import { Switch } from ".."; //Quiz,
 const ElearningImage = () => {
   const navigate = useNavigate();
-  const handleauth = () => {
-    localStorage.setItem("active", false);
-    navigate("quiz");
-    // const timeout = setTimeout(() => {
-    //   localStorage.setItem("active", false);
-    // }, 10000);
-    // clearTimeout(timeout);
-  };
   const Logout = () => {
     localStorage.clear();
 
@@ -34,7 +26,7 @@ const ElearningImage = () => {
             <Link to="signin">Sign in</Link>
           </li>
           <li>
-            <Link onClick={handleauth}>Quiz</Link>
+            <Link to="quiz">Quiz</Link>
           </li>
           <li>
             <Link to="game">Game</Link>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
-import { Chart, FormCardSecond, FormCard, Navbar, Sidebar } from "../"; // Quiz,
-import { Aboutus, Courses, HeroBanner, Instructor } from "../../sections";
+import { FormCard, Navbar } from "../"; // Quiz,
+import { Aboutus, HeroBanner, Instructor } from "../../sections";
 
 const Index = () => {
   return (
@@ -14,10 +14,6 @@ const Index = () => {
         <Aboutus />
         <FormCard />
         <Instructor />
-        {/* <Courses /> */}
-        <FormCardSecond />
-        {/* <Sidebar /> */}
-        {/* <Chart /> */}
       </main>
     </div>
   );
